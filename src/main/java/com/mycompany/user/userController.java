@@ -1,5 +1,7 @@
 package com.mycompany.user;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +13,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.List;
 @Controller
 public class userController {
+
+    Logger logger = LoggerFactory.getLogger(userController.class);
     @Autowired
     private userService service;
 
@@ -19,6 +23,8 @@ public class userController {
        List<User> listUsers= service.listAll();
         System.out.println(listUsers);
        model.addAttribute("listUsers",listUsers);
+
+        logger.info("Displaying list of all students");
         return "users";
     }
 
@@ -26,6 +32,7 @@ public class userController {
     public String showNewForm(Model model){
         model.addAttribute("user",new User());
         model.addAttribute("pagetitle","add new user");
+        logger.info("New student is being added");
         return "user_form";
     }
 
@@ -33,15 +40,18 @@ public class userController {
     public String saveUser(User user, RedirectAttributes ra){
         service.save(user);
         ra.addFlashAttribute("message","The user has been saved successfully!!");
+        logger.info("Student saved succesfully");
         return "redirect:/users";
     }
 
     @GetMapping("/users/edit/{id}")
     public String showEditForm(@PathVariable("id") Integer id,Model model,RedirectAttributes ra){
+        logger.info("user edited succesfully");
         try{
            User user= service.get(id);
            model.addAttribute("user",user);
             model.addAttribute("pagetitle","Edit user (ID: "+id+ ")");
+
             return "user_form";
         }
         catch(UserNotFoundException e){
@@ -53,6 +63,7 @@ public class userController {
     @GetMapping("/users/delete/{id}")
     public String delete(@PathVariable("id") Integer id,Model model,RedirectAttributes ra){
         try{
+            logger.info("deleted successfully");
             service.delete(id);
     ra.addFlashAttribute("message","The User ID" +id+ "has been deleted successfully");
         }

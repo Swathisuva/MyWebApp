@@ -1,5 +1,7 @@
 package com.mycompany.user;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,14 +11,18 @@ import java.util.Optional;
 
 @Service
 public class userService {
+    Logger logger = LoggerFactory.getLogger(userService.class);
     @Autowired
     private UserRepository repo;
 
+
     public List<User> listAll(){
+        logger.info("getting list of users");
         return (List<User>) repo.findAll();
     }
 
     public void save(User user) {
+        logger.info("user saved succesfully");
         repo.save(user);
     }
     public User get(Integer id) throws UserNotFoundException {
