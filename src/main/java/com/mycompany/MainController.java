@@ -6,7 +6,7 @@ public class MainController {
 
     @GetMapping("")
     public String showHomePage(){
-        System.out.println("main contrroler");
+
         return "index";
     }
 }
