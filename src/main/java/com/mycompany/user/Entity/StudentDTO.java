@@ -1,74 +1,41 @@
+//studentDTO.java
 package com.mycompany.user.Entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class StudentDTO {
 
-    private Integer id;
+    private Long id;
     private String dept;
     private String password;
     private String firstName;
     private String lastName;
-    private String enabled;
 
-    // Constructors, getters, and setters...
+    // No need for explicit constructors, getters, and setters with Lombok annotations.
 
-    public StudentDTO() {
-        // Default constructor
-    }
 
-    public StudentDTO(Integer id, String dept, String password, String firstName, String lastName, String enabled) {
-        this.id = id;
-        this.dept = dept;
-        this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.enabled = enabled;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getDept() {
-        return dept;
-    }
-
-    public void setDept(String dept) {
-        this.dept = dept;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(String enabled) {
-        this.enabled = enabled;
-    }
+public static StudentDTO fromEntity(Student student) {
+    return new StudentDTO(
+            student.getId(),
+            student.getDept(),
+            student.getPassword(),
+            student.getFirstName(),
+            student.getLastName()
+    );
 }
+public static Student toEntity(StudentDTO studentDTO) {
+    Student student = new Student();
+    student.setId(studentDTO.getId());
+    student.setDept(studentDTO.getDept());
+    student.setPassword(studentDTO.getPassword());
+    student.setFirstName(studentDTO.getFirstName());
+    student.setLastName(studentDTO.getLastName());
+    return student;
+}
+}
+
