@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.mycompany.StudentControllerTests" time="11.446" tests="5" errors="0" skipped="0" failures="5">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.mycompany.StudentControllerTests" time="10.731" tests="5" errors="0" skipped="0" failures="5">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Users\SubramaS\.jdks\openjdk-21.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\SubramaS\AppData\Local\Temp\surefire5602642194843455847\surefirebooter-20240121215814121_3.jar C:\Users\SubramaS\AppData\Local\Temp\surefire5602642194843455847 2024-01-21T21-58-13_763-jvmRun1 surefire-20240121215814121_1tmp surefire_0-20240121215814121_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\SubramaS\AppData\Local\Temp\surefire10669149266636006330\surefirebooter-20240121220127632_3.jar C:\Users\SubramaS\AppData\Local\Temp\surefire10669149266636006330 2024-01-21T22-01-27_427-jvmRun1 surefire-20240121220127632_1tmp surefire_0-20240121220127632_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\swathi\MyWebApp\target\test-classes;C:\swathi\MyWebApp\target\classes;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.1\spring-boot-starter-data-jpa-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.1\spring-boot-starter-aop-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\aspectj\aspectjweaver\1.9.21\aspectjweaver-1.9.21.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.1\spring-boot-starter-jdbc-3.2.1.jar;C:\Users\SubramaS\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-jdbc\6.1.2\spring-jdbc-6.1.2.jar;C:\Users\SubramaS\.m2\repository\org\hibernate\orm\hibernate-core\6.4.1.Final\hibernate-core-6.4.1.Final.jar;C:\Users\SubramaS\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\SubramaS\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\SubramaS\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\SubramaS\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\SubramaS\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\SubramaS\.m2\repository\net\bytebuddy\byte-buddy\1.14.10\byte-buddy-1.14.10.jar;C:\Users\SubramaS\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\SubramaS\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\SubramaS\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\SubramaS\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\SubramaS\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\SubramaS\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\SubramaS\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\SubramaS\.m2\repository\org\springframework\data\spring-data-jpa\3.2.1\spring-data-jpa-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\data\spring-data-commons\3.2.1\spring-data-commons-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-orm\6.1.2\spring-orm-6.1.2.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-context\6.1.2\spring-context-6.1.2.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-tx\6.1.2\spring-tx-6.1.2.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-beans\6.1.2\spring-beans-6.1.2.jar;C:\Users\SubramaS\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\SubramaS\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-aspects\6.1.2\spring-aspects-6.1.2.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.1\spring-boot-starter-web-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.1\spring-boot-starter-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot\3.2.1\spring-boot-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.1\spring-boot-autoconfigure-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.1\spring-boot-starter-logging-3.2.1.jar;C:\Users\SubramaS\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\SubramaS\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\SubramaS\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\SubramaS\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\SubramaS\.m2\repository\org\slf4j\jul-to-slf4j\2.0.9\jul-to-slf4j-2.0.9.jar;C:\Users\SubramaS\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.1\spring-boot-starter-json-3.2.1.jar;C:\Users\SubramaS\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.3\jackson-datatype-jdk8-2.15.3.jar;C:\Users\SubramaS\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.3\jackson-datatype-jsr310-2.15.3.jar;C:\Users\SubramaS\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.3\jackson-module-parameter-names-2.15.3.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.1\spring-boot-starter-tomcat-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.17\tomcat-embed-core-10.1.17.jar;C:\Users\SubramaS\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.17\tomcat-embed-el-10.1.17.jar;C:\Users\SubramaS\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.17\tomcat-embed-websocket-10.1.17.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-web\6.1.2\spring-web-6.1.2.jar;C:\Users\SubramaS\.m2\repository\io\micrometer\micrometer-observation\1.12.1\micrometer-observation-1.12.1.jar;C:\Users\SubramaS\.m2\repository\io\micrometer\micrometer-commons\1.12.1\micrometer-commons-1.12.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-webmvc\6.1.2\spring-webmvc-6.1.2.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-expression\6.1.2\spring-expression-6.1.2.jar;C:\Users\SubramaS\.m2\repository\org\modelmapper\modelmapper\3.1.1\modelmapper-3.1.1.jar;C:\Users\SubramaS\.m2\repository\com\mysql\mysql-connector-j\8.1.0\mysql-connector-j-8.1.0.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.1\spring-boot-starter-test-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-test\3.2.1\spring-boot-test-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.1\spring-boot-test-autoconfigure-3.2.1.jar;C:\Users\SubramaS\.m2\repository\com\jayway\jsonpath\json-path\2.8.0\json-path-2.8.0.jar;C:\Users\SubramaS\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\SubramaS\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\SubramaS\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\SubramaS\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\SubramaS\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\SubramaS\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\SubramaS\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\SubramaS\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\SubramaS\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\SubramaS\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\SubramaS\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\SubramaS\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\SubramaS\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\SubramaS\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\SubramaS\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\SubramaS\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\SubramaS\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\SubramaS\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.10\byte-buddy-agent-1.14.10.jar;C:\Users\SubramaS\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\SubramaS\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\SubramaS\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\SubramaS\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-core\6.1.2\spring-core-6.1.2.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-jcl\6.1.2\spring-jcl-6.1.2.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-test\6.1.2\spring-test-6.1.2.jar;C:\Users\SubramaS\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\SubramaS\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.0.3\springdoc-openapi-starter-webmvc-ui-2.0.3.jar;C:\Users\SubramaS\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.0.3\springdoc-openapi-starter-webmvc-api-2.0.3.jar;C:\Users\SubramaS\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.0.3\springdoc-openapi-starter-common-2.0.3.jar;C:\Users\SubramaS\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.8\swagger-core-jakarta-2.2.8.jar;C:\Users\SubramaS\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\SubramaS\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.8\swagger-annotations-jakarta-2.2.8.jar;C:\Users\SubramaS\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.8\swagger-models-jakarta-2.2.8.jar;C:\Users\SubramaS\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\SubramaS\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.3\jackson-dataformat-yaml-2.15.3.jar;C:\Users\SubramaS\.m2\repository\org\webjars\swagger-ui\4.17.1\swagger-ui-4.17.1.jar;C:\Users\SubramaS\.m2\repository\org\webjars\webjars-locator-core\0.55\webjars-locator-core-0.55.jar;C:\Users\SubramaS\.m2\repository\io\github\classgraph\classgraph\4.8.149\classgraph-4.8.149.jar;C:\Users\SubramaS\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.2.1\spring-boot-starter-security-3.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\spring-aop\6.1.2\spring-aop-6.1.2.jar;C:\Users\SubramaS\.m2\repository\org\springframework\security\spring-security-config\6.2.1\spring-security-config-6.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\security\spring-security-core\6.2.1\spring-security-core-6.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\security\spring-security-crypto\6.2.1\spring-security-crypto-6.2.1.jar;C:\Users\SubramaS\.m2\repository\org\springframework\security\spring-security-web\6.2.1\spring-security-web-6.2.1.jar;C:\Users\SubramaS\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\SubramaS\.m2\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar;C:\Users\SubramaS\.m2\repository\io\jsonwebtoken\jjwt-impl\0.11.5\jjwt-impl-0.11.5.jar;C:\Users\SubramaS\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.11.5\jjwt-jackson-0.11.5.jar;C:\Users\SubramaS\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.3\jackson-databind-2.15.3.jar;C:\Users\SubramaS\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.3\jackson-annotations-2.15.3.jar;C:\Users\SubramaS\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.3\jackson-core-2.15.3.jar;C:\Users\SubramaS\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\SubramaS\AppData\Local\Temp\surefire5602642194843455847\surefirebooter-20240121215814121_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\SubramaS\AppData\Local\Temp\surefire10669149266636006330\surefirebooter-20240121220127632_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.1+12-29"/>
@@ -53,7 +53,7 @@
     <property name="user.dir" value="C:\swathi\MyWebApp"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="19724"/>
+    <property name="PID" value="22304"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="Cp1252"/>
@@ -65,7 +65,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testSaveStudent" classname="com.mycompany.StudentControllerTests" time="1.402">
+  <testcase name="testSaveStudent" classname="com.mycompany.StudentControllerTests" time="1.27">
     <failure message="Status expected:&lt;201&gt; but was:&lt;403&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<201> but was:<403>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
@@ -76,95 +76,95 @@
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></failure>
-    <system-out><![CDATA[21:58:16,319 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.14
-21:58:16,323 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1115ec15 - Here is a list of configurators discovered as a service, by rank: 
-21:58:16,323 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1115ec15 -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
-21:58:16,323 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1115ec15 - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
-21:58:16,323 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1115ec15 - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
-21:58:16,336 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1115ec15 - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 0 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
-21:58:16,336 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1115ec15 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
-21:58:16,337 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1115ec15 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
-21:58:16,340 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
-21:58:16,340 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
-21:58:16,340 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1115ec15 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 3 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
-21:58:16,340 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1115ec15 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
-21:58:16,341 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1115ec15 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
-21:58:16,341 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-21:58:16,345 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/swathi/MyWebApp/target/classes/logback.xml]
-21:58:16,477 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
-21:58:16,477 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-21:58:16,531 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.
-21:58:16,531 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
-21:58:16,531 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
-21:58:16,532 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-AUDIT]
-21:58:16,532 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
-21:58:16,556 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@137275020 - No compression will be used
-21:58:16,558 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@137275020 - Will use the pattern logs/archived/debug.%d{yyyy-MM-dd}.%i.log for the active file
-21:58:16,561 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@59e505b2 - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/archived/debug.%d{yyyy-MM-dd}.%i.log'.
-21:58:16,561 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@59e505b2 - Roll-over at midnight.
-21:58:16,562 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@59e505b2 - Setting initial period to 2024-01-16T08:59:24.036Z
-21:58:16,562 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@59e505b2 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
-21:58:16,562 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@59e505b2 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
-21:58:16,569 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-AUDIT] - Active log file name: logs/debug.log
-21:58:16,569 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-AUDIT] - File property is set to [logs/debug.log]
-21:58:16,571 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-ERROR]
-21:58:16,571 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
-21:58:16,572 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@988850650 - No compression will be used
-21:58:16,572 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@988850650 - Will use the pattern logs/archived/error.%d{yyyy-MM-dd}.%i.log for the active file
-21:58:16,572 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@43b9fd5 - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/archived/error.%d{yyyy-MM-dd}.%i.log'.
-21:58:16,572 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@43b9fd5 - Roll-over at midnight.
-21:58:16,574 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@43b9fd5 - Setting initial period to 2024-01-21T14:29:19.927Z
-21:58:16,574 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@43b9fd5 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
-21:58:16,574 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@43b9fd5 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
-21:58:16,575 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-ERROR] - Active log file name: logs/error.log
-21:58:16,575 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-ERROR] - File property is set to [logs/error.log]
-21:58:16,576 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [logging.level.com.appsdeveloperblog] to DEBUG
-21:58:16,579 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [logging.level.com.appsdeveloperblog] to false
-21:58:16,580 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-AUDIT] to Logger[logging.level.com.appsdeveloperblog]
-21:58:16,581 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[logging.level.com.appsdeveloperblog]
-21:58:16,581 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to ERROR
-21:58:16,581 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-ERROR] to Logger[ROOT]
-21:58:16,581 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@79dc5318 - End of configuration.
-21:58:16,586 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@8e50104 - Registering current configuration as safe fallback point
-21:58:16,586 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1115ec15 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 245 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+    <system-out><![CDATA[22:01:29,270 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.14
+22:01:29,272 |-INFO in ch.qos.logback.classic.util.ContextInitializer@14bee915 - Here is a list of configurators discovered as a service, by rank: 
+22:01:29,273 |-INFO in ch.qos.logback.classic.util.ContextInitializer@14bee915 -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
+22:01:29,273 |-INFO in ch.qos.logback.classic.util.ContextInitializer@14bee915 - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
+22:01:29,273 |-INFO in ch.qos.logback.classic.util.ContextInitializer@14bee915 - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
+22:01:29,282 |-INFO in ch.qos.logback.classic.util.ContextInitializer@14bee915 - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 0 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+22:01:29,283 |-INFO in ch.qos.logback.classic.util.ContextInitializer@14bee915 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+22:01:29,283 |-INFO in ch.qos.logback.classic.util.ContextInitializer@14bee915 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+22:01:29,286 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+22:01:29,286 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+22:01:29,286 |-INFO in ch.qos.logback.classic.util.ContextInitializer@14bee915 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 3 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+22:01:29,286 |-INFO in ch.qos.logback.classic.util.ContextInitializer@14bee915 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+22:01:29,287 |-INFO in ch.qos.logback.classic.util.ContextInitializer@14bee915 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+22:01:29,287 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+22:01:29,292 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/swathi/MyWebApp/target/classes/logback.xml]
+22:01:29,417 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
+22:01:29,417 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+22:01:29,477 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+22:01:29,477 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+22:01:29,477 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+22:01:29,477 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-AUDIT]
+22:01:29,477 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+22:01:29,500 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@286649365 - No compression will be used
+22:01:29,502 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@286649365 - Will use the pattern logs/archived/debug.%d{yyyy-MM-dd}.%i.log for the active file
+22:01:29,506 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@82ea68c - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/archived/debug.%d{yyyy-MM-dd}.%i.log'.
+22:01:29,506 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@82ea68c - Roll-over at midnight.
+22:01:29,508 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@82ea68c - Setting initial period to 2024-01-16T08:59:24.036Z
+22:01:29,508 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@82ea68c - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+22:01:29,508 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@82ea68c - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+22:01:29,518 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-AUDIT] - Active log file name: logs/debug.log
+22:01:29,518 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-AUDIT] - File property is set to [logs/debug.log]
+22:01:29,520 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-ERROR]
+22:01:29,520 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+22:01:29,522 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1508181426 - No compression will be used
+22:01:29,522 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1508181426 - Will use the pattern logs/archived/error.%d{yyyy-MM-dd}.%i.log for the active file
+22:01:29,522 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af0a9da - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/archived/error.%d{yyyy-MM-dd}.%i.log'.
+22:01:29,522 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af0a9da - Roll-over at midnight.
+22:01:29,523 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af0a9da - Setting initial period to 2024-01-21T16:28:27.874Z
+22:01:29,523 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af0a9da - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+22:01:29,523 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af0a9da - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+22:01:29,524 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-ERROR] - Active log file name: logs/error.log
+22:01:29,524 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-ERROR] - File property is set to [logs/error.log]
+22:01:29,525 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [logging.level.com.appsdeveloperblog] to DEBUG
+22:01:29,529 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [logging.level.com.appsdeveloperblog] to false
+22:01:29,530 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-AUDIT] to Logger[logging.level.com.appsdeveloperblog]
+22:01:29,530 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[logging.level.com.appsdeveloperblog]
+22:01:29,531 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to ERROR
+22:01:29,531 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-ERROR] to Logger[ROOT]
+22:01:29,531 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@43b9fd5 - End of configuration.
+22:01:29,531 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@79dc5318 - Registering current configuration as safe fallback point
+22:01:29,531 |-INFO in ch.qos.logback.classic.util.ContextInitializer@14bee915 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 244 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
 
-21:58:17,408 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
-21:58:17,408 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-21:58:17,409 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.
-21:58:17,409 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
-21:58:17,409 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
-21:58:17,409 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-AUDIT]
-21:58:17,409 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
-21:58:17,410 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@2062667107 - No compression will be used
-21:58:17,410 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@2062667107 - Will use the pattern logs/archived/debug.%d{yyyy-MM-dd}.%i.log for the active file
-21:58:17,411 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4351171a - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/archived/debug.%d{yyyy-MM-dd}.%i.log'.
-21:58:17,411 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4351171a - Roll-over at midnight.
-21:58:17,412 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4351171a - Setting initial period to 2024-01-16T08:59:24.036Z
-21:58:17,412 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4351171a - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
-21:58:17,412 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4351171a - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
-21:58:17,412 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-AUDIT] - Active log file name: logs/debug.log
-21:58:17,412 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-AUDIT] - File property is set to [logs/debug.log]
-21:58:17,413 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-ERROR]
-21:58:17,413 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
-21:58:17,415 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1009218257 - No compression will be used
-21:58:17,415 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1009218257 - Will use the pattern logs/archived/error.%d{yyyy-MM-dd}.%i.log for the active file
-21:58:17,415 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@37d00a23 - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/archived/error.%d{yyyy-MM-dd}.%i.log'.
-21:58:17,415 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@37d00a23 - Roll-over at midnight.
-21:58:17,416 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@37d00a23 - Setting initial period to 2024-01-21T14:29:19.927Z
-21:58:17,416 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@37d00a23 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
-21:58:17,416 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@37d00a23 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
-21:58:17,417 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-ERROR] - Active log file name: logs/error.log
-21:58:17,417 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-ERROR] - File property is set to [logs/error.log]
-21:58:17,418 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [logging.level.com.appsdeveloperblog] to DEBUG
-21:58:17,418 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@433e536f - Propagating DEBUG level on Logger[logging.level.com.appsdeveloperblog] onto the JUL framework
-21:58:17,419 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [logging.level.com.appsdeveloperblog] to false
-21:58:17,419 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-AUDIT] to Logger[logging.level.com.appsdeveloperblog]
-21:58:17,419 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[logging.level.com.appsdeveloperblog]
-21:58:17,419 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to ERROR
-21:58:17,419 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@433e536f - Propagating ERROR level on Logger[ROOT] onto the JUL framework
-21:58:17,419 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-ERROR] to Logger[ROOT]
-21:58:17,419 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@89c65d5 - End of configuration.
-21:58:17,419 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@faa3fed - Registering current configuration as safe fallback point
+22:01:30,290 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
+22:01:30,290 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+22:01:30,291 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+22:01:30,291 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+22:01:30,291 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+22:01:30,291 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-AUDIT]
+22:01:30,291 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+22:01:30,293 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@371440613 - No compression will be used
+22:01:30,293 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@371440613 - Will use the pattern logs/archived/debug.%d{yyyy-MM-dd}.%i.log for the active file
+22:01:30,293 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7af1cd63 - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/archived/debug.%d{yyyy-MM-dd}.%i.log'.
+22:01:30,293 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7af1cd63 - Roll-over at midnight.
+22:01:30,294 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7af1cd63 - Setting initial period to 2024-01-16T08:59:24.036Z
+22:01:30,294 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7af1cd63 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+22:01:30,294 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7af1cd63 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+22:01:30,295 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-AUDIT] - Active log file name: logs/debug.log
+22:01:30,295 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-AUDIT] - File property is set to [logs/debug.log]
+22:01:30,295 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-ERROR]
+22:01:30,295 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+22:01:30,296 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1129387802 - No compression will be used
+22:01:30,297 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1129387802 - Will use the pattern logs/archived/error.%d{yyyy-MM-dd}.%i.log for the active file
+22:01:30,297 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3c2772d1 - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/archived/error.%d{yyyy-MM-dd}.%i.log'.
+22:01:30,297 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3c2772d1 - Roll-over at midnight.
+22:01:30,298 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3c2772d1 - Setting initial period to 2024-01-21T16:28:27.874Z
+22:01:30,298 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3c2772d1 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+22:01:30,298 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3c2772d1 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+22:01:30,298 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-ERROR] - Active log file name: logs/error.log
+22:01:30,298 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-ERROR] - File property is set to [logs/error.log]
+22:01:30,299 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [logging.level.com.appsdeveloperblog] to DEBUG
+22:01:30,299 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@37d00a23 - Propagating DEBUG level on Logger[logging.level.com.appsdeveloperblog] onto the JUL framework
+22:01:30,300 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [logging.level.com.appsdeveloperblog] to false
+22:01:30,300 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-AUDIT] to Logger[logging.level.com.appsdeveloperblog]
+22:01:30,300 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[logging.level.com.appsdeveloperblog]
+22:01:30,300 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to ERROR
+22:01:30,300 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@37d00a23 - Propagating ERROR level on Logger[ROOT] onto the JUL framework
+22:01:30,300 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-ERROR] to Logger[ROOT]
+22:01:30,300 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@433e536f - End of configuration.
+22:01:30,300 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@89c65d5 - Registering current configuration as safe fallback point
 
 
   .   ____          _            __ _ _
@@ -218,7 +218,7 @@ WARNING: If a serviceability tool is not in use, please run with -Djdk.instrumen
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
 ]]></system-err>
   </testcase>
-  <testcase name="testUpdateStudent" classname="com.mycompany.StudentControllerTests" time="0.012">
+  <testcase name="testUpdateStudent" classname="com.mycompany.StudentControllerTests" time="0.017">
     <failure message="Status expected:&lt;200&gt; but was:&lt;403&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<403>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
@@ -267,7 +267,7 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteStudent" classname="com.mycompany.StudentControllerTests" time="0.01">
+  <testcase name="testDeleteStudent" classname="com.mycompany.StudentControllerTests" time="0.013">
     <failure message="Status expected:&lt;200&gt; but was:&lt;403&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<403>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
@@ -316,7 +316,7 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="testGetAllstudents" classname="com.mycompany.StudentControllerTests" time="0.015">
+  <testcase name="testGetAllstudents" classname="com.mycompany.StudentControllerTests" time="0.012">
     <failure message="Status expected:&lt;200&gt; but was:&lt;403&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<403>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
@@ -365,7 +365,7 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="testGetStudentById" classname="com.mycompany.StudentControllerTests" time="0.012">
+  <testcase name="testGetStudentById" classname="com.mycompany.StudentControllerTests" time="0.017">
     <failure message="Status expected:&lt;200&gt; but was:&lt;403&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<403>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)

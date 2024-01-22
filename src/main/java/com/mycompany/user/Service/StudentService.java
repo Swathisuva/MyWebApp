@@ -1,14 +1,17 @@
 //
-//
 //package com.mycompany.user.Service;
 //
 //import com.mycompany.user.Entity.StudentDTO;
 //import com.mycompany.user.Entity.Student;
 //import com.mycompany.user.Repository.StudentRepository;
+//import com.mycompany.user.Repository.UserInfoRepository;
+//import com.mycompany.user.UserInfo;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.stereotype.Service;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 //
 //import java.util.List;
 //import java.util.Optional;
@@ -19,6 +22,12 @@
 //    private static final Logger logger = LoggerFactory.getLogger(StudentService.class);
 //
 //    @Autowired
+//    private PasswordEncoder passwordEncoder;
+//
+//    @Autowired
+//    private UserInfoRepository repository;
+//
+//    @Autowired
 //    private StudentRepository repo;
 //
 //    public List<StudentDTO> getAllStudents() {
@@ -27,9 +36,10 @@
 //        return students.stream().map(this::convertToDTO).collect(Collectors.toList());
 //    }
 //
+//
 //    public Optional<StudentDTO> getStudentById(Long id) {
 //        logger.debug("Finding student by id: {}", id);
-//        Optional<Student> studentOptional = repo.findById(id.intValue());
+//        Optional<Student> studentOptional = repo.findById(Math.toIntExact(id));
 //        return studentOptional.map(this::convertToDTO);
 //    }
 //
@@ -42,13 +52,13 @@
 //
 //    public void deleteStudent(Long id) {
 //        logger.debug("Deleting student by id: {}", id);
-//        repo.deleteById(id.intValue());
+//        repo.deleteById(Math.toIntExact(id));
 //    }
 //
 //    public StudentDTO updateStudent(Long id, StudentDTO updatedStudentDTO) {
 //        logger.debug("Updating student with id: {}", id);
 //
-//        Optional<Student> existingStudentOptional = repo.findById(id.intValue());
+//        Optional<Student> existingStudentOptional = repo.findById(Math.toIntExact(id));
 //
 //        if (existingStudentOptional.isPresent()) {
 //            Student existingStudent = existingStudentOptional.get();
@@ -89,10 +99,15 @@
 //        student.setLastName(studentDTO.getLastName());
 //        return student;
 //    }
+//
+//    public String addUser(UserInfo userInfo) {
+//        userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));
+//        repository.save(userInfo);
+//        return "user added to system";
+//    }
 //}
-
-
-// StudentService.java
+//
+//
 package com.mycompany.user.Service;
 
 import com.mycompany.user.Entity.StudentDTO;
@@ -103,6 +118,8 @@ import com.mycompany.user.UserInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -124,12 +141,15 @@ public class StudentService {
     @Autowired
     private StudentRepository repo;
 
+
+
+
+
     public List<StudentDTO> getAllStudents() {
         logger.debug("Fetching all students");
         List<Student> students = (List<Student>) repo.findAll();
         return students.stream().map(this::convertToDTO).collect(Collectors.toList());
     }
-
 
     public Optional<StudentDTO> getStudentById(Long id) {
         logger.debug("Finding student by id: {}", id);
@@ -200,5 +220,3 @@ public class StudentService {
         return "user added to system";
     }
 }
-
-

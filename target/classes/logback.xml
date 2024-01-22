@@ -51,8 +51,10 @@
         <appender-ref ref="FILE-AUDIT" />
         <appender-ref ref="STDOUT" />
     </logger>
+    <logger name="org.springframework.boot.autoconfigure" level="INFO" />
+    <logger name="org.springframework.boot.autoconfigure.condition" level="INFO" />
+<root level="info">
+    <appender-ref ref="STDOUT" />
+</root>
 
-    <root level="error">
-        <appender-ref ref="FILE-ERROR" />
-    </root>
 </configuration>
