@@ -1,8 +1,8 @@
-package com.mycompany.user.Repository;
+package com.mycompany.student.Repository;
 
 
 
-import com.mycompany.user.Entity.Student;
+import com.mycompany.student.Entity.Student;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

@@ -4154,7 +4154,7 @@ Unconditional classes:
 2024-01-18 12:28:36 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
 2024-01-18 12:28:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
 2024-01-18 12:28:36 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/students", parameters={}
-2024-01-18 12:28:36 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mycompany.user.Controller.StudentController#getAllStudents()
+2024-01-18 12:28:36 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mycompany.student.Controller.StudentController#getAllStudents()
 2024-01-18 12:28:37 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select s1_0.id,s1_0.dept,s1_0.first_name,s1_0.last_name,s1_0.password from students s1_0
 2024-01-18 12:28:37 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
 2024-01-18 12:28:37 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[StudentDTO(id=11, dept=cse, password=sample, firstName=suvee213, lastName=sswatt123), StudentDTO(id (truncated)...]

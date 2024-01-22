@@ -108,20 +108,17 @@
 //}
 //
 //
-package com.mycompany.user.Service;
+package com.mycompany.student.Service;
 
-import com.mycompany.user.Entity.StudentDTO;
-import com.mycompany.user.Entity.Student;
-import com.mycompany.user.Repository.StudentRepository;
-import com.mycompany.user.Repository.UserInfoRepository;
-import com.mycompany.user.UserInfo;
+import com.mycompany.student.Entity.StudentDTO;
+import com.mycompany.student.Entity.Student;
+import com.mycompany.student.Repository.StudentRepository;
+import com.mycompany.student.Repository.UserInfoRepository;
+import com.mycompany.student.user.UserInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.List;

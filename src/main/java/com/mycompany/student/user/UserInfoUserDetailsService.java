@@ -1,8 +1,10 @@
-package com.mycompany.user;
+package com.mycompany.student.user;
 
 
 
-import com.mycompany.user.Repository.UserInfoRepository;
+import com.mycompany.student.Repository.UserInfoRepository;
+import com.mycompany.student.user.UserInfo;
+import com.mycompany.student.user.UserInfoUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

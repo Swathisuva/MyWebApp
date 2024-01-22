@@ -106,17 +106,14 @@
 
 package com.mycompany;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mycompany.user.Entity.StudentDTO;
-import com.mycompany.user.Service.StudentService;
-import jakarta.validation.ConstraintViolationException;
+import com.mycompany.student.Entity.StudentDTO;
+import com.mycompany.student.Service.StudentService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.web.util.NestedServletException;
-
 
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;

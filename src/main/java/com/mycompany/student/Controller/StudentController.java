@@ -2,11 +2,11 @@
 //// StudentController.java
 //package com.mycompany.user.Controller;
 //
-//import com.mycompany.user.AuthRequest;
+//import com.mycompany.user.security.AuthRequest;
 //import com.mycompany.user.Entity.StudentDTO;
 //
 //import com.mycompany.user.Service.StudentService;
-//import com.mycompany.user.JWTService;
+//import com.mycompany.user.security.JWTService;
 //import com.mycompany.user.UserInfo;
 //import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 //import org.slf4j.Logger;
@@ -107,19 +107,17 @@
 //        return ResponseEntity.ok().build();
 //    }
 //}
-package com.mycompany.user.Controller;
+package com.mycompany.student.Controller;
 
-import com.mycompany.user.AuthRequest;
-import com.mycompany.user.Entity.StudentDTO;
-import com.mycompany.user.Service.StudentService;
-import com.mycompany.user.JWTService;
-import com.mycompany.user.UserInfo;
+import com.mycompany.student.security.AuthRequest;
+import com.mycompany.student.Entity.StudentDTO;
+import com.mycompany.student.Service.StudentService;
+import com.mycompany.student.security.JWTService;
+import com.mycompany.student.user.UserInfo;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Profile;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;

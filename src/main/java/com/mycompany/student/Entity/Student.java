@@ -1,6 +1,6 @@
 
 //student.java
-package com.mycompany.user.Entity;
+package com.mycompany.student.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

@@ -1,5 +1,5 @@
 //studentDTO.java
-package com.mycompany.user.Entity;
+package com.mycompany.student.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
