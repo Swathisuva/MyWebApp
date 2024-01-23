@@ -37,24 +37,20 @@ private JwtAuthFilter authFilter;
         return config.getAuthenticationManager();
     }
 
-//    @Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-//        return http.csrf().disable()
-//                .authorizeHttpRequests()
-//                .requestMatchers("/students","/students/new").permitAll()
-//                .and()
-//                .authorizeHttpRequests().requestMatchers("/students/**")
-//                .authenticated().and().formLogin().and().build();
-//    }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
-                .cors(cors->cors.disable())
-                .authorizeHttpRequests(auth->auth.requestMatchers("/home").authenticated().requestMatchers("/auth/login","/v3/api-docs/**","swagger-ui/**","/swagger-ui.html","/students/new","/students/authenticate").permitAll().anyRequest().authenticated())
-//                .exceptionHandling(ex-> ex.authenticationEntryPoint(point))
-                .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                .cors(cors -> cors.disable())
+                .authorizeRequests(auth -> auth
+                        .requestMatchers("/home").authenticated()
+                        .requestMatchers("/auth/login","/v3/api-docs/**","swagger-ui/**","/swagger-ui.html","/students/new","/students/authenticate","/auth/new","/auth/authenticate","/actuator/health","/actuator/**","/students/addstudent").permitAll()
+                        .requestMatchers("/students/new").hasRole("user") // Add the new path and role requirement
+                        .anyRequest().authenticated())
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+
         http.addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class);
+
         return http.build();
     }
 

@@ -119,6 +119,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -127,7 +128,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.mail.MailSender;
 import java.util.List;
 import java.util.Optional;
 
@@ -155,7 +156,8 @@ public class StudentController {
     @Autowired
     private UserDetailsService userDetailsService;
 
-
+    @Autowired
+    private MailSender mailSender;
     private String applicationName;
 
 
@@ -192,6 +194,8 @@ public class StudentController {
     public ResponseEntity<StudentDTO> saveStudent(@RequestBody StudentDTO studentDTO) {
         logger.debug("Saving student: {} from {}", studentDTO, applicationName);
         StudentDTO savedStudent = service.saveStudent(studentDTO);
+
+
         return ResponseEntity.ok(savedStudent);
     }
 
@@ -215,7 +219,13 @@ public class StudentController {
     public String addNewUser(@RequestBody UserInfo userInfo) {
         return service.addUser(userInfo);
     }
-
+    @PostMapping("/addstudent")
+    @PreAuthorize("hasAuthority('ROLE_USER')")
+    public ResponseEntity<StudentDTO> addStudent(@RequestBody StudentDTO studentDTO) {
+        logger.debug("Adding student: {} from {}", studentDTO, applicationName);
+        StudentDTO savedStudent = service.addStudent(studentDTO);
+        return ResponseEntity.ok(savedStudent);
+    }
 
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAuthority('ROLE_USER')")
