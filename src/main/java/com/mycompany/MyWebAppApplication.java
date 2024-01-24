@@ -12,10 +12,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 
 @ComponentScan(basePackages = "com.mycompany")
+@EnableScheduling
 public class MyWebAppApplication {
 
     public static void main(String[] args) {

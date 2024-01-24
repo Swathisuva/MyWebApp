@@ -44,6 +44,7 @@ public class StudentService {
     public List<StudentDTO> getAllStudents() {
         logger.debug("Fetching all students");
         List<Student> students = (List<Student>) repo.findAll();
+//        sendEmail("Student Displayed");
         return students.stream().map(this::convertToDTO).collect(Collectors.toList());
     }
 
@@ -57,7 +58,7 @@ public class StudentService {
         logger.debug("Saving student: {}", studentDTO);
         Student student = convertToEntity(studentDTO);
         Student savedStudent = repo.save(student);
-        sendEmail("Student Saved");
+//        sendEmail("Student Saved");
         return convertToDTO(savedStudent);
 
 
@@ -66,7 +67,7 @@ public class StudentService {
     public void deleteStudent(Long id) {
         logger.debug("Deleting student by id: {}", id);
         repo.deleteById(Math.toIntExact(id));
-        sendEmail("Student Deleted");
+//        sendEmail("Student Deleted");
     }
 
     public StudentDTO updateStudent(Long id, StudentDTO updatedStudentDTO) {
@@ -84,7 +85,7 @@ public class StudentService {
             existingStudent.setLastName(updatedStudentDTO.getLastName());
 
             Student updatedStudent = repo.save(existingStudent);
-            sendEmail("Student Updated");
+//            sendEmail("Student Updated");
             return convertToDTO(updatedStudent);
         } else {
             logger.debug("Student with id {} not found", id);
@@ -125,18 +126,11 @@ public class StudentService {
 
         // Save the student to the students table
         Student savedStudent = repo.save(student);
-
+//        sendEmail("Student Added");
         // Optionally, send email notification or perform any other necessary actions
 
         // Convert the saved student back to DTO for response
         return convertToDTO(savedStudent);
     }
-    private void sendEmail(String subject) {
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom(senderEmail);
-        message.setTo("swathi@email.com"); // Replace with your email
-        message.setSubject(subject);
-        message.setText("This is the body of the email.");
-        mailSender.send(message);
-    }
+
 }
