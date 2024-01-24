@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_24-01-2024_15_28_[Changes]1" date="1706090421778" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-01-2024_15_28_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 24-01-2024 15:28 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/mycompany/MyWebAppApplication$SwaggerConfig.class" />
+    <option name="AFTER_PATH" value="target/classes/com/mycompany/MyWebAppApplication$SwaggerConfig.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-01-2024_15_28_[Changes]1/MyWebAppApplication$SwaggerConfig.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/mycompany/MyWebAppApplication.class" />
+    <option name="AFTER_PATH" value="target/classes/com/mycompany/MyWebAppApplication.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-01-2024_15_28_[Changes]1/MyWebAppApplication.class" />
+  </binary>
+</changelist>
