@@ -1,0 +1,14 @@
+Index: target/classes/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.datasource.url=jdbc:mysql://localhost:3306/usersdb\r\nspring.datasource.username=root\r\nspring.datasource.password=1234\r\nspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect\r\nspring.jpa.hibernate.ddl-auto=update\r\nspring.jpa.open-in-view=false\r\nspring.jpa.properties.hibernate.show_sql=true\r\ndebug=true\r\nlogging.level.org.springframework=INFO\r\n#spring boot profile config\r\nspring.profiles.active=test\r\nmanagement.endpoint.health.show-details=always\r\nspring.mail.host=localhost\r\nspring.mail.port=25\r\nspring.mail.username=swathi@unisys\r\nspring.mail.password=swathi1234\r\n\r\nspring.mail.properties.mail.smtp.auth=true\r\nspring.mail.properties.mail.transport.protocol=smtp\r\nspring.mail.properties.mail.smtps.quitwait=false\r\nspring.mail.properties.mail.smtp.socketFactory.port=465\r\nspring.mail.properties.mail.smtp.socketFactory.class=javax.net.ssl.SSLSocketFactory\r\n\r\n
+===================================================================
+diff --git a/target/classes/application.properties b/target/classes/application.properties
+--- a/target/classes/application.properties	
++++ b/target/classes/application.properties	
+@@ -21,3 +21,4 @@
+ spring.mail.properties.mail.smtp.socketFactory.port=465
+ spring.mail.properties.mail.smtp.socketFactory.class=javax.net.ssl.SSLSocketFactory
+ 
++spring.task.execution.pool.core-size=10
+\ No newline at end of file

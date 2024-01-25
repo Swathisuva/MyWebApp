@@ -1,14 +1,17 @@
 //studentDTO.java
 package com.mycompany.student.Entity;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentDTO {
+public class StudentDTO implements Serializable {
 
     private Long id;
     private String dept;

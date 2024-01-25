@@ -44,7 +44,7 @@ private JwtAuthFilter authFilter;
                 .cors(cors -> cors.disable())
                 .authorizeRequests(auth -> auth
                         .requestMatchers("/home").authenticated()
-                        .requestMatchers("/auth/login","/v3/api-docs/**","swagger-ui/**","/swagger-ui.html","/students/new","/students/authenticate","/auth/new","/auth/authenticate","/actuator/health","/actuator/**","/students/addstudent").permitAll()
+                        .requestMatchers("/auth/login","/v3/api-docs/**","swagger-ui/**","/swagger-ui.html","/students/new","/students/authenticate","/auth/new","/auth/authenticate","/actuator/health","/actuator/**","/students/addstudent","/publishMessage").permitAll()
                         .requestMatchers("/students/new").hasRole("user") // Add the new path and role requirement
                         .anyRequest().authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));

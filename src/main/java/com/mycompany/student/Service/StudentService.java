@@ -10,7 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -54,15 +53,23 @@ public class StudentService {
         return studentOptional.map(this::convertToDTO);
     }
 
+//    public StudentDTO saveStudent(StudentDTO studentDTO) {
+//        logger.debug("Saving student: {}", studentDTO);
+//        Student student = convertToEntity(studentDTO);
+//        Student savedStudent = repo.save(student);
+////        sendEmail("Student Saved");
+//        return convertToDTO(savedStudent);
+//
+//
+//    }
+
     public StudentDTO saveStudent(StudentDTO studentDTO) {
-        logger.debug("Saving student: {}", studentDTO);
-        Student student = convertToEntity(studentDTO);
-        Student savedStudent = repo.save(student);
-//        sendEmail("Student Saved");
-        return convertToDTO(savedStudent);
-
-
+        // Convert StudentDTO to Student entity and save to the database
+        Student student = StudentDTO.toEntity(studentDTO);
+        repo.save(student);
+        return studentDTO;
     }
+
 
     public void deleteStudent(Long id) {
         logger.debug("Deleting student by id: {}", id);
