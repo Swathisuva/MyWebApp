@@ -59,7 +59,7 @@ public class PublishController {
     @PostMapping("/publishMessage")
     public ResponseEntity<String> publishMessage(@RequestBody StudentDTO studentDTO) {
         try {
-            jmsTemplate.convertAndSend("bridgingcode-queue", studentDTO);
+            jmsTemplate.convertAndSend("student_queue", studentDTO);
             return new ResponseEntity<>("Sent.", HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
