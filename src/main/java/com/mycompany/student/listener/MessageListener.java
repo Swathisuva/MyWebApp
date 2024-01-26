@@ -1,6 +1,6 @@
 
 
-package com.mycompany.student.queue.listener;
+package com.mycompany.student.listener;
 
 
 import com.mycompany.student.Entity.StudentDTO;
@@ -18,12 +18,12 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
-public class MessageConsumer {
+public class MessageListener {
 
     @Autowired
     private StudentService studentService; // Inject your service
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(MessageConsumer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MessageListener.class);
 
     @JmsListener(destination = "student_queue")
     public void messageListener(StudentDTO studentDTO) {
