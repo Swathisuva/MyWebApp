@@ -1,7 +1,7 @@
 package com.mycompany.student.user;
 
 
-import com.mycompany.student.user.UserInfo;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

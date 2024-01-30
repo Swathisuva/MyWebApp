@@ -1,8 +1,9 @@
 package com.mycompany.student.config;
 
+import com.mycompany.student.repository.UserInfoRepository;
 import com.mycompany.student.security.JwtAuthFilter;
 import com.mycompany.student.user.UserInfoUserDetailsService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -24,13 +25,16 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 
 public class SecurityConfig {
-@Autowired
-private JwtAuthFilter authFilter;
-    @Bean
-    //authentication
-    public UserDetailsService userDetailsService() {
 
-        return new UserInfoUserDetailsService();
+private JwtAuthFilter authFilter;
+    private UserInfoRepository userInfoRepository;
+    SecurityConfig(JwtAuthFilter authFilter, UserInfoRepository userInfoRepository){
+    this.authFilter=authFilter;
+    this.userInfoRepository=userInfoRepository;
+}
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return new UserInfoUserDetailsService(userInfoRepository);
     }
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
@@ -44,8 +48,8 @@ private JwtAuthFilter authFilter;
                 .cors(cors -> cors.disable())
                 .authorizeRequests(auth -> auth
                         .requestMatchers("/home").authenticated()
-                        .requestMatchers("/auth/login","/v3/api-docs/**","swagger-ui/**","/swagger-ui.html","/students/new","/students/authenticate","/auth/new","/auth/authenticate","/actuator/health","/actuator/**","/students/addstudent","/publishMessage").permitAll()
-                        .requestMatchers("/students/new").hasRole("user") // Add the new path and role requirement
+                        .requestMatchers("/auth/login","/v3/api-docs/**","swagger-ui/**","/swagger-ui.html","/publishMessage","/students/new","/students/authenticate","/auth/new","/auth/authenticate","/actuator/health","/actuator/**","/students/addstudent").permitAll()
+                        .requestMatchers("/publishMessage").hasRole("user") // Add the new path and role requirement
                         .anyRequest().authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 

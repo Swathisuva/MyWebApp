@@ -5,8 +5,8 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.springframework.beans.factory.annotation.Autowired;
+
+
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -16,30 +16,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmailAspect {
 
-    @Autowired
+
     private MailSender mailSender;
 
-    public EmailAspect() {
+    EmailAspect(MailSender mailSender){
+        this.mailSender=mailSender;
     }
 
-//    @Before("execution(* com.mycompany.student.Controller.StudentController.*(..)) && !execution(* com.mycompany.student.Controller.StudentController.authenticateAndGetToken(..))")
-//    public void sendEmailBeforeMethodExecution(JoinPoint joinPoint) {
-//        try {
-//            String methodName = joinPoint.getSignature().getName();
-//            String to = "swathi@email.com";
-//            String subject = "Method Execution Started: " + methodName;
-//            String text = "The method " + methodName + " has started its execution.";
-//            this.sendEmail(to, subject, text);
-//        } catch (Exception e) {
-//            handleEmailException(e);
-//        }
-//    }
-
-    @After("execution(* com.mycompany.student.Controller.StudentController.*(..)) && !execution(* com.mycompany.student.Controller.StudentController.authenticateAndGetToken(..))")
+    @After("execution(* com.mycompany.student.controller.StudentController.*(..)) && !execution(* com.mycompany.student.controller.StudentController.authenticateAndGetToken(..))")
     public void sendEmailAfterMethodExecution(JoinPoint joinPoint) {
         try {
             String methodName = joinPoint.getSignature().getName();
-            String to = "swathi@email.com";
+            String to = "swathi@jmail.com";
             String subject = "Method Execution Completed: " + methodName;
             String text = "The method " + methodName + " has completed its execution.";
             this.sendEmail(to, subject, text);
@@ -48,11 +36,11 @@ public class EmailAspect {
         }
     }
 
-    @AfterThrowing(pointcut = "execution(* com.mycompany.student.Controller.StudentController.*(..)) && !execution(* com.mycompany.student.Controller.StudentController.authenticateAndGetToken(..))", throwing = "e")
+    @AfterThrowing(pointcut = "execution(* com.mycompany.student.controller.StudentController.*(..)) && !execution(* com.mycompany.student.controller.StudentController.authenticateAndGetToken(..))", throwing = "e")
     public void sendEmailOnFailure(JoinPoint joinPoint, Exception e) {
         try {
             String methodName = joinPoint.getSignature().getName();
-            String to = "swathi@email.com";
+            String to = "swathi@jmail.com";
             String subject = "Method Execution Failed: " + methodName;
             String text = "The method " + methodName + " has failed with the following exception:\n" + e.getMessage();
             this.sendEmail(to, subject, text);
@@ -101,83 +89,3 @@ public class EmailAspect {
     }
 }
 
-//package com.mycompany.student.email;
-//
-//import org.aspectj.lang.JoinPoint;
-//import org.aspectj.lang.annotation.After;
-//import org.aspectj.lang.annotation.AfterThrowing;
-//import org.aspectj.lang.annotation.Aspect;
-//import org.aspectj.lang.annotation.Before;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.mail.MailSender;
-//import org.springframework.mail.SimpleMailMessage;
-//import org.springframework.stereotype.Component;
-//
-//@Aspect
-//@Component
-//public class EmailAspect {
-//
-//    @Autowired
-//    private MailSender mailSender;
-//
-//    @Autowired
-//    private Scheduler scheduler;
-//
-//    public EmailAspect() {
-//    }
-//
-//    @Before("execution(* com.mycompany.student.Controller.StudentController.*(..)) && !execution(* com.mycompany.student.Controller.StudentController.authenticateAndGetToken(..))")
-//    public void sendEmailBeforeMethodExecution(JoinPoint joinPoint) {
-//        try {
-//            String methodName = joinPoint.getSignature().getName();
-//            String to = "swathi@email.com";
-//            String subject = "Method Execution Started: " + methodName;
-//            String text = "The method " + methodName + " has started its execution.";
-//            sendEmail(to, subject, text);
-//        } catch (Exception e) {
-//            handleEmailException(e);
-//        }
-//    }
-//
-//    @After("execution(* com.mycompany.student.Controller.StudentController.*(..)) && !execution(* com.mycompany.student.Controller.StudentController.authenticateAndGetToken(..))")
-//    public void sendEmailAfterMethodExecution(JoinPoint joinPoint) {
-//        try {
-//            String methodName = joinPoint.getSignature().getName();
-//            String to = "swathi@email.com";
-//            String subject = "Method Execution Completed: " + methodName;
-//            String text = "The method " + methodName + " has completed its execution.";
-//            sendEmail(to, subject, text);
-//        } catch (Exception e) {
-//            handleEmailException(e);
-//        }
-//    }
-//
-//    @AfterThrowing(pointcut = "execution(* com.mycompany.student.Controller.StudentController.*(..)) && !execution(* com.mycompany.student.Controller.StudentController.authenticateAndGetToken(..))", throwing = "e")
-//    public void sendEmailOnFailure(JoinPoint joinPoint, Exception e) {
-//        try {
-//            String methodName = joinPoint.getSignature().getName();
-//            String to = "swathi@email.com";
-//            String subject = "Method Execution Failed: " + methodName;
-//            String text = "The method " + methodName + " has failed with the following exception:\n" + e.getMessage();
-//            sendEmail(to, subject, text);
-//        } catch (Exception ex) {
-//            handleEmailException(ex);
-//        }
-//    }
-//
-//    private void sendEmail(String to, String subject, String text) {
-//        try {
-//            SimpleMailMessage message = new SimpleMailMessage();
-//            message.setTo(to);
-//            message.setSubject(subject);
-//            message.setText(text);
-//            this.mailSender.send(message);
-//        } catch (Exception e) {
-//            handleEmailException(e);
-//        }
-//    }
-//
-//    private void handleEmailException(Exception e) {
-//        e.printStackTrace(); // Handle the exception, e.g., log it or send an error email to the administrator.
-//    }
-//}

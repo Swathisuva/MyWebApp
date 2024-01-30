@@ -4,7 +4,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c9a2f2a-5dda-4f40-b76f-921d1999ea04" name="Changes" comment="first commit" />
+    <list default="true" id="4c9a2f2a-5dda-4f40-b76f-921d1999ea04" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1b8a9d0d39834dc957a566706cee2953e0c4ecb3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8fc032eabfe8c4bb08f1aa77267ffc424faf2e9d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b77baa6aba1b7274e32736b76b3987c57425f5ef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/baa9edf88be11ea64882f006dc8607b9db1ba99c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c820d240b3d712e4f30f5e726048348f01073d6f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/cae802fd2d44994a32514ab6374c99884d7402e4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/b/1b8a9d0d39834dc957a566706cee2953e0c4ecb3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/f/8fc032eabfe8c4bb08f1aa77267ffc424faf2e9d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/7/b77baa6aba1b7274e32736b76b3987c57425f5ef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/a/baa9edf88be11ea64882f006dc8607b9db1ba99c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/8/c820d240b3d712e4f30f5e726048348f01073d6f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/a/cae802fd2d44994a32514ab6374c99884d7402e4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mywebapp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sonar-project.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/TestConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/test/StudentControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Controller/HealthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Controller/PublishController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Entity/StudentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/entity/StudentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Repository/UserInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/repository/UserInfoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/email/EmailAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/email/EmailAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/healthindicator/CustomHealthIndicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/healthindicator/CustomHealthIndicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/listener/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/listener/MessageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/security/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/security/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/user/UserInfoUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/user/UserInfoUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/user/UserInfoUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/user/UserInfoUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/MyWebAppApplication$SwaggerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/MyWebAppApplication$SwaggerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Controller/HealthController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Entity/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Entity/StudentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Entity/StudentDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Repository/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Repository/StudentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Repository/UserInfoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Repository/UserInfoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/email/EmailAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/email/EmailAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/healthindicator/CustomHealthIndicator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/healthindicator/CustomHealthIndicator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/listener/MessageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/listener/MessageListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/AuthRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/AuthRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/JWTService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/JWTService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/JwtAuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/JwtAuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfoUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfoUserDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfoUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfoUserDetailsService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,63 +135,76 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.MyWebAppApplication.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JUnit.StudentControllerTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentControllerTests.testDeleteStudent.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentControllerTests.testGetAllDepartments.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentControllerTests.testGetAllStudents.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentControllerTests.testGetAllstudents.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentControllerTests.testGetStudentById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentControllerTests.testSaveDepartment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentControllerTests.testSaveStudent.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentControllerTests.testUpdateDepartment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentControllerTests.testUpdateStudent.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentRepositoryTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentRepositoryTests.testAddNew.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentRepositoryTests.testGet.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.StudentRepositoryTests.testListAll.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTests.testAddNew.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.MyWebApp [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.MyWebApp [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mywebapp [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mywebapp [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mywebapp [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mywebapp [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mywebapp [spring-boot:run,-DskipsTests...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mywebapp [spring-boot:run].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.MyWebAppApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main1&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/swathi/MyWebApp/target/classes/com/mycompany/student&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.MyWebAppApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.StudentControllerTest (1).executor": "Run",
+    "JUnit.StudentControllerTest.authenticateAndGetToken_ValidCredentials_ReturnsToken.executor": "Run",
+    "JUnit.StudentControllerTest.executor": "Run",
+    "JUnit.StudentControllerTest.getAllStudents_ReturnsListOfStudents.executor": "Run",
+    "JUnit.StudentControllerTest.saveStudent_InvalidStudent_ReturnsBadRequest.executor": "Run",
+    "JUnit.StudentControllerTest.testGetAllStudents.executor": "Run",
+    "JUnit.StudentControllerTests (1).executor": "Run",
+    "JUnit.StudentControllerTests.authenticateAndGetToken_ValidCredentials_ReturnsToken.executor": "Run",
+    "JUnit.StudentControllerTests.executor": "Run",
+    "JUnit.StudentControllerTests.getAllStudents_ReturnsListOfStudents.executor": "Run",
+    "JUnit.StudentControllerTests.getStudentById_ExistingStudent_ReturnsStudent.executor": "Run",
+    "JUnit.StudentControllerTests.testDeleteStudent.executor": "Run",
+    "JUnit.StudentControllerTests.testGetAllDepartments.executor": "Run",
+    "JUnit.StudentControllerTests.testGetAllStudents.executor": "Run",
+    "JUnit.StudentControllerTests.testGetAllstudents.executor": "Run",
+    "JUnit.StudentControllerTests.testGetStudentById.executor": "Run",
+    "JUnit.StudentControllerTests.testSaveDepartment.executor": "Run",
+    "JUnit.StudentControllerTests.testSaveStudent.executor": "Run",
+    "JUnit.StudentControllerTests.testUpdateDepartment.executor": "Run",
+    "JUnit.StudentControllerTests.testUpdateStudent.executor": "Coverage",
+    "JUnit.StudentRepositoryTests.executor": "Run",
+    "JUnit.StudentRepositoryTests.testAddNew.executor": "Run",
+    "JUnit.StudentRepositoryTests.testGet.executor": "Debug",
+    "JUnit.StudentRepositoryTests.testListAll.executor": "Run",
+    "JUnit.UserRepositoryTests.testAddNew.executor": "Run",
+    "Maven.MyWebApp [clean].executor": "Run",
+    "Maven.MyWebApp [install].executor": "Run",
+    "Maven.mywebapp [clean,install,-U].executor": "Run",
+    "Maven.mywebapp [clean,install].executor": "Run",
+    "Maven.mywebapp [clean].executor": "Run",
+    "Maven.mywebapp [help:describe...].executor": "Run",
+    "Maven.mywebapp [install].executor": "Run",
+    "Maven.mywebapp [package].executor": "Run",
+    "Maven.mywebapp [spring-boot:run,-DskipsTests...].executor": "Run",
+    "Maven.mywebapp [spring-boot:run].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.MyWebAppApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main1",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/swathi/MyWebApp/target/classes/com/mycompany/student",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.mycompany.user" />
@@ -149,8 +224,12 @@
       <command value="mvn spring-boot:run -DskipsTests -Dspring-boot.run.profiles=prod" />
       <command value="mvn clean" />
       <command value="mvn install" />
-      <command value="mvn clean install" />
       <command value="mvn spring-boot:run -DskipsTests -Dspring-boot.run.profiles=dev" />
+      <command value="mvn help:describe -Dplugin=org.jacoco:jacoco-maven-plugin -Ddetail" />
+      <command value="mvn clean install -U " />
+      <command value="clean org.jacoco:jacoco-maven-plugin:prepare-agent install" />
+      <command value="mvn clean install" />
+      <command value="mvn spring-boot:run -DskipsTests -Dspring-boot.run.profiles=test" />
     </option>
   </component>
   <component name="RunManager" selected="Application.MyWebAppApplication">
@@ -159,7 +238,7 @@
       <module name="mywebapp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mycompany.*" />
+          <option name="PATTERN" value="com.mycompany.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -167,64 +246,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyWebApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mycompany.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mycompany" />
-      <option name="MAIN_CLASS_NAME" value="com.mycompany.StudentControllerTests" />
+    <configuration name="StudentControllerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mywebapp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StudentControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentControllerTests.testGetAllDepartments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyWebApp" />
+    <configuration name="StudentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mywebapp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mycompany.*" />
+          <option name="PATTERN" value="com.mycompany.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mycompany" />
-      <option name="MAIN_CLASS_NAME" value="com.mycompany.StudentControllerTests" />
-      <option name="METHOD_NAME" value="testGetAllDepartments" />
+      <option name="PACKAGE_NAME" value="com.mycompany.test" />
+      <option name="MAIN_CLASS_NAME" value="com.mycompany.test.StudentControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentControllerTest.getAllStudents_ReturnsListOfStudents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mywebapp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mycompany.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mycompany.test" />
+      <option name="MAIN_CLASS_NAME" value="com.mycompany.test.StudentControllerTest" />
+      <option name="METHOD_NAME" value="getAllStudents_ReturnsListOfStudents" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentControllerTests.testGetAllStudents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyWebApp" />
+    <configuration name="StudentControllerTest.testGetAllStudents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mywebapp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mycompany.*" />
+          <option name="PATTERN" value="com.mycompany.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mycompany" />
-      <option name="MAIN_CLASS_NAME" value="com.mycompany.StudentControllerTests" />
+      <option name="PACKAGE_NAME" value="com.mycompany.test" />
+      <option name="MAIN_CLASS_NAME" value="com.mycompany.test.StudentControllerTest" />
       <option name="METHOD_NAME" value="testGetAllStudents" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentControllerTests.testGetAllstudents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyWebApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mycompany.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mycompany" />
-      <option name="MAIN_CLASS_NAME" value="com.mycompany.StudentControllerTests" />
-      <option name="METHOD_NAME" value="testGetAllstudents" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -241,10 +313,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MyWebAppApplication" />
-        <item itemvalue="JUnit.StudentControllerTests.testGetAllStudents" />
-        <item itemvalue="JUnit.StudentControllerTests.testGetAllDepartments" />
-        <item itemvalue="JUnit.StudentControllerTests.testGetAllstudents" />
-        <item itemvalue="JUnit.StudentControllerTests" />
+        <item itemvalue="JUnit.StudentControllerTest.testGetAllStudents" />
+        <item itemvalue="JUnit.StudentControllerTest" />
+        <item itemvalue="JUnit.StudentControllerTest (1)" />
+        <item itemvalue="JUnit.StudentControllerTest.getAllStudents_ReturnsListOfStudents" />
       </list>
     </recent_temporary>
   </component>
@@ -517,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706251583053</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1706253264720</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1706253264720</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,17 +634,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/mycompany/StudentControllerTests.java</url>
-          <line>91</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/mycompany/StudentControllerTests.java</url>
-          <line>142</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/mycompany/student/Service/StudentService.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/mycompany/student/service/StudentService.java</url>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -572,7 +642,58 @@
           <line>20</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/mycompany/StudentControllerTests.java</url>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/mycompany/StudentControllerTests.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/mycompany/StudentControllerTests.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/mycompany/StudentControllerTests.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/mycompany/student/controller/StudentController.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/mycompany/StudentControllerTests.java</url>
+          <line>324</line>
+          <properties class="com.example.mycompany.StudentControllerTests">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/mycompany/test/StudentControllerTest.java</url>
+          <line>422</line>
+          <properties class="com.mycompany.test.StudentControllerTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
+          <option name="timeStamp" value="22" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MyWebApp$StudentControllerTests_testUpdateStudent.ic" NAME="StudentControllerTests.testUpdateStudent Coverage Results" MODIFIED="1706522624319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.mycompany.*</FILTER>
+    </SUITE>
   </component>
 </project>
