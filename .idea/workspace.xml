@@ -4,69 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c9a2f2a-5dda-4f40-b76f-921d1999ea04" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1b8a9d0d39834dc957a566706cee2953e0c4ecb3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8fc032eabfe8c4bb08f1aa77267ffc424faf2e9d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b77baa6aba1b7274e32736b76b3987c57425f5ef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/baa9edf88be11ea64882f006dc8607b9db1ba99c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c820d240b3d712e4f30f5e726048348f01073d6f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/cae802fd2d44994a32514ab6374c99884d7402e4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/b/1b8a9d0d39834dc957a566706cee2953e0c4ecb3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/f/8fc032eabfe8c4bb08f1aa77267ffc424faf2e9d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/7/b77baa6aba1b7274e32736b76b3987c57425f5ef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/a/baa9edf88be11ea64882f006dc8607b9db1ba99c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/8/c820d240b3d712e4f30f5e726048348f01073d6f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/a/cae802fd2d44994a32514ab6374c99884d7402e4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mywebapp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sonar-project.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/TestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/test/StudentControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Controller/HealthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Controller/PublishController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Entity/StudentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/entity/StudentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Repository/UserInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/repository/UserInfoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/email/EmailAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/email/EmailAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/healthindicator/CustomHealthIndicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/healthindicator/CustomHealthIndicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/listener/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/listener/MessageListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/security/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/security/JwtAuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/user/UserInfoUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/user/UserInfoUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/student/user/UserInfoUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/student/user/UserInfoUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/MyWebAppApplication$SwaggerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/MyWebAppApplication$SwaggerConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Controller/HealthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Entity/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Entity/StudentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Entity/StudentDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Repository/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Repository/StudentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Repository/UserInfoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Repository/UserInfoRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/Service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/email/EmailAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/email/EmailAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/healthindicator/CustomHealthIndicator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/healthindicator/CustomHealthIndicator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/listener/MessageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/listener/MessageListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/AuthRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/AuthRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/JWTService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/JWTService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/JwtAuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/security/JwtAuthFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfoUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfoUserDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfoUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/student/user/UserInfoUserDetailsService.class" afterDir="false" />
-    </list>
+    <list default="true" id="4c9a2f2a-5dda-4f40-b76f-921d1999ea04" name="Changes" comment="first commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,9 +120,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "Spring Boot.MyWebAppApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main1",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/swathi/MyWebApp/target/classes/com/mycompany/student",
@@ -597,7 +535,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706253264720</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1706592134854</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1706592134854</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
