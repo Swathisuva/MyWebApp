@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 public class CustomHealthIndicator implements HealthIndicator {
 
 
-    private JdbcTemplate jdbcTemplate;
-    CustomHealthIndicator(JdbcTemplate jdbcTemplate){
+    public JdbcTemplate jdbcTemplate;
+    public CustomHealthIndicator(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate=jdbcTemplate;
     }
 
@@ -24,7 +24,7 @@ public class CustomHealthIndicator implements HealthIndicator {
         }
     }
 
-    private boolean isDatabaseConnectionHealthy() {
+    public boolean isDatabaseConnectionHealthy() {
         try {
             // Execute a simple query to check the health of the database
             jdbcTemplate.queryForObject("SELECT 1 FROM dual", Integer.class);

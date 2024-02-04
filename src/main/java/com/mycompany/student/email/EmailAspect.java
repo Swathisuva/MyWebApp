@@ -12,6 +12,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import static org.hibernate.sql.ast.SqlTreeCreationLogger.LOGGER;
+
 @Aspect
 @Component
 public class EmailAspect {
@@ -19,7 +21,7 @@ public class EmailAspect {
 
     private MailSender mailSender;
 
-    EmailAspect(MailSender mailSender){
+    public EmailAspect(MailSender mailSender){
         this.mailSender=mailSender;
     }
 
@@ -85,7 +87,10 @@ public class EmailAspect {
     }
 
     private void handleEmailException(Exception e) {
-        e.printStackTrace(); // Handle the exception, e.g., log it or send an error email to the administrator.
+
+        LOGGER.error("An error occurred while handling email: {}", e.getMessage(), e);
+
+
     }
 }
 

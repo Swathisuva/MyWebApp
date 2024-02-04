@@ -4,6 +4,7 @@ import com.mycompany.student.repository.UserInfoRepository;
 import com.mycompany.student.security.JwtAuthFilter;
 import com.mycompany.student.user.UserInfoUserDetailsService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -23,24 +24,26 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
-
 public class SecurityConfig {
 
-private JwtAuthFilter authFilter;
+    private JwtAuthFilter authFilter;
     private UserInfoRepository userInfoRepository;
-    SecurityConfig(JwtAuthFilter authFilter, UserInfoRepository userInfoRepository){
-    this.authFilter=authFilter;
-    this.userInfoRepository=userInfoRepository;
-}
+
+    @Autowired
+    public SecurityConfig(JwtAuthFilter authFilter, UserInfoRepository userInfoRepository) {
+        this.authFilter = authFilter;
+        this.userInfoRepository = userInfoRepository;
+    }
+
     @Bean
     public UserDetailsService userDetailsService() {
         return new UserInfoUserDetailsService(userInfoRepository);
     }
+
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
-
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -48,7 +51,9 @@ private JwtAuthFilter authFilter;
                 .cors(cors -> cors.disable())
                 .authorizeRequests(auth -> auth
                         .requestMatchers("/home").authenticated()
-                        .requestMatchers("/auth/login","/v3/api-docs/**","swagger-ui/**","/swagger-ui.html","/publishMessage","/students/new","/students/authenticate","/auth/new","/auth/authenticate","/actuator/health","/actuator/**","/students/addstudent").permitAll()
+                        .requestMatchers("/auth/login", "/v3/api-docs/**", "swagger-ui/**", "/swagger-ui.html",
+                                "/publishMessage", "/students/new", "/students/authenticate", "/auth/new",
+                                "/auth/authenticate", "/actuator/health", "/actuator/**", "/students/addstudent").permitAll()
                         .requestMatchers("/publishMessage").hasRole("user") // Add the new path and role requirement
                         .anyRequest().authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
@@ -64,11 +69,10 @@ private JwtAuthFilter authFilter;
     }
 
     @Bean
-    public AuthenticationProvider authenticationProvider(){
-        DaoAuthenticationProvider authenticationProvider=new DaoAuthenticationProvider();
+    public AuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
         authenticationProvider.setUserDetailsService(userDetailsService());
         authenticationProvider.setPasswordEncoder(passwordEncoder());
         return authenticationProvider;
     }
-
 }

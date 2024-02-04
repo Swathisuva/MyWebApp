@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StudentController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mywebapp</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.student.controller</a> &gt; <span class="el_source">StudentController.java</span></div><h1>StudentController.java</h1><pre class="source lang-java linenums">
+package com.mycompany.student.controller;
+
+
+import com.mycompany.student.entity.StudentDTO;
+import com.mycompany.student.service.StudentService;
+
+
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.security.access.prepost.PreAuthorize;
+
+
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.annotation.*;
+
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+
+@RestController
+@RequestMapping(&quot;/students&quot;)
+@SecurityRequirement(name=&quot;Bearer-key&quot;)
+
+public class StudentController {
+
+<span class="fc" id="L38">    private static final Logger logger = LoggerFactory.getLogger(StudentController.class);</span>
+
+
+
+
+
+
+
+    private StudentService service;
+
+
+
+
+
+
+
+
+
+    private String applicationName;
+
+
+    private JmsTemplate jmsTemplate;
+
+
+
+<span class="fc" id="L63">    StudentController(JmsTemplate jmsTemplate,StudentService service){</span>
+<span class="fc" id="L64">        this.jmsTemplate = jmsTemplate;</span>
+
+
+<span class="fc" id="L67">        this.service=service;</span>
+
+
+<span class="fc" id="L70">    }</span>
+    @GetMapping
+    @PreAuthorize(&quot;hasAuthority('ROLE_USER')&quot;)
+    public ResponseEntity&lt;List&lt;StudentDTO&gt;&gt; getAllStudents() {
+<span class="fc" id="L74">        logger.debug(&quot;List of all students from {}&quot;, applicationName);</span>
+<span class="fc" id="L75">        List&lt;StudentDTO&gt; students = service.getAllStudents();</span>
+<span class="fc" id="L76">        return ResponseEntity.ok(students);</span>
+    }
+
+
+
+@Cacheable(value=&quot;students&quot;)
+@GetMapping(&quot;/{id}&quot;)
+@PreAuthorize(&quot;hasAuthority('ROLE_USER')&quot;)
+public StudentDTO getStudentById(@PathVariable Long id) {
+<span class="fc" id="L85">    logger.debug(&quot;Getting student by id: {} from {}&quot;, id, applicationName);</span>
+<span class="fc" id="L86">    return service.getStudentById(id).orElse(null);</span>
+}
+
+
+
+    @CacheEvict(value=&quot;students&quot;)
+    @PostMapping
+    @PreAuthorize(&quot;hasAuthority('ROLE_USER')&quot;)
+    public StudentDTO saveStudent(@RequestBody StudentDTO studentDTO) {
+<span class="fc" id="L95">        logger.debug(&quot;Saving student: {} from {}&quot;, studentDTO, applicationName);</span>
+<span class="fc" id="L96">        return service.saveStudent(studentDTO);</span>
+    }
+
+
+
+    @PutMapping(&quot;/{id}&quot;)
+    @PreAuthorize(&quot;hasAuthority('ROLE_USER')&quot;)
+    public ResponseEntity&lt;StudentDTO&gt; updateStudent(@PathVariable Long id, @RequestBody StudentDTO updatedStudentDTO) {
+<span class="fc" id="L104">        logger.debug(&quot;Updating student with id: {} from {}&quot;, id, applicationName);</span>
+
+<span class="fc" id="L106">        StudentDTO updatedStudent = service.updateStudent(id, updatedStudentDTO);</span>
+
+<span class="fc bfc" id="L108" title="All 2 branches covered.">        if (updatedStudent != null) {</span>
+<span class="fc" id="L109">            return ResponseEntity.ok(updatedStudent);</span>
+        } else {
+<span class="fc" id="L111">            logger.debug(&quot;Student with id {} not found&quot;, id);</span>
+<span class="fc" id="L112">            return ResponseEntity.notFound().build();</span>
+        }
+    }
+
+
+    @PostMapping(&quot;/addstudent&quot;)
+    @PreAuthorize(&quot;hasAuthority('ROLE_USER')&quot;)
+    public ResponseEntity&lt;StudentDTO&gt; addStudent(@RequestBody StudentDTO studentDTO) {
+<span class="fc" id="L120">        logger.debug(&quot;Adding student: {} from {}&quot;, studentDTO, applicationName);</span>
+<span class="fc" id="L121">        StudentDTO savedStudent = service.addStudent(studentDTO);</span>
+<span class="fc" id="L122">        return ResponseEntity.ok(savedStudent);</span>
+    }
+
+//    @DeleteMapping(&quot;/{id}&quot;)
+//    @PreAuthorize(&quot;hasAuthority('ROLE_USER')&quot;)
+//    public ResponseEntity&lt;Void&gt; deleteStudent(@PathVariable Long id) {
+//        logger.debug(&quot;Deleting student by id: {} from {}&quot;, id, applicationName);
+//        service.deleteStudent(id);
+//        return ResponseEntity.ok().build();
+//    }
+
+    @DeleteMapping(&quot;/{id}&quot;)
+    @PreAuthorize(&quot;hasAuthority('ROLE_USER')&quot;)
+    public ResponseEntity&lt;Void&gt; deleteStudent(@PathVariable Long id) {
+<span class="fc" id="L136">        logger.debug(&quot;Deleting student by id: {} from {}&quot;, id, applicationName);</span>
+        try {
+<span class="fc" id="L138">            service.deleteStudent(id);</span>
+<span class="fc" id="L139">            return ResponseEntity.ok().build();</span>
+<span class="fc" id="L140">        } catch (IllegalArgumentException e) {</span>
+<span class="fc" id="L141">            logger.debug(&quot;Student with id {} not found&quot;, id);</span>
+<span class="fc" id="L142">            return ResponseEntity.notFound().build();</span>
+        }
+    }
+
+
+    //    @PostMapping(&quot;/publishMessage&quot;)
+//    public ResponseEntity&lt;String&gt; publishMessage(@RequestBody StudentDTO studentDTO) {
+//        try {
+//            jmsTemplate.convertAndSend(&quot;student_queue&quot;, studentDTO);
+//            return new ResponseEntity&lt;&gt;(&quot;Sent.&quot;, HttpStatus.OK);
+//        } catch (Exception e) {
+//            return new ResponseEntity&lt;&gt;(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
+//    }
+    @PostMapping(&quot;/publishMessage&quot;)
+    public ResponseEntity&lt;?&gt; publishMessage(@RequestBody StudentDTO studentDTO) {
+        try {
+<span class="fc" id="L159">            jmsTemplate.convertAndSend(&quot;student_queue&quot;, studentDTO);</span>
+<span class="fc" id="L160">            return new ResponseEntity&lt;&gt;(&quot;Sent.&quot;, HttpStatus.OK);</span>
+<span class="fc" id="L161">        } catch (Exception e) {</span>
+<span class="fc" id="L162">            logger.error(&quot;Error publishing message:&quot;, e);</span>
+<span class="fc" id="L163">            return new ResponseEntity&lt;&gt;(&quot;Failed to publish message.&quot;, HttpStatus.INTERNAL_SERVER_ERROR);</span>
+        }
+    }
+
+
+
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

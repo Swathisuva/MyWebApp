@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mywebapp</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.student.controller</a> &gt; <span class="el_source">UserController.java</span></div><h1>UserController.java</h1><pre class="source lang-java linenums">package com.mycompany.student.controller;
+
+
+
+
+import com.mycompany.student.security.AuthRequest;
+import com.mycompany.student.security.JWTService;
+import com.mycompany.student.service.UserService;
+import com.mycompany.student.user.UserInfo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UserController {
+    private final AuthenticationManager authenticationManager;
+    private final JWTService jwtService;
+    private final UserService userService;
+
+
+    @Autowired
+<span class="fc" id="L30">    public UserController(AuthenticationManager authenticationManager, JWTService jwtService,  UserService userService) {</span>
+<span class="fc" id="L31">        this.authenticationManager = authenticationManager;</span>
+<span class="fc" id="L32">        this.jwtService = jwtService;</span>
+<span class="fc" id="L33">        this.userService = userService;</span>
+<span class="fc" id="L34">    }</span>
+
+    @PostMapping(&quot;/auth/new&quot;)
+    public String addNewUser(@RequestBody UserInfo userInfo) {
+<span class="fc" id="L38">        return userService.addUser(userInfo);</span>
+    }
+
+    @PostMapping(&quot;/auth/authenticate&quot;)
+    public ResponseEntity&lt;String&gt; authenticateAndGetToken(@RequestBody AuthRequest authRequest) {
+        try {
+            // Perform authentication without disclosing details about valid or invalid usernames
+<span class="fc" id="L45">            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));</span>
+
+            // If authentication is successful, generate and return the token
+<span class="fc" id="L48">            String token = jwtService.generateToken(authRequest.getUsername());</span>
+<span class="fc" id="L49">            return ResponseEntity.ok(token);</span>
+<span class="fc" id="L50">        } catch (AuthenticationException e) {</span>
+            // Authentication failed, return a generic error message
+<span class="fc" id="L52">            throw new BadCredentialsException(&quot;Invalid credentials&quot;);</span>
+        }
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

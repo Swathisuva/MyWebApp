@@ -4,7 +4,6 @@ C:\swathi\MyWebApp\src\main\java\com\mycompany\student\security\AuthRequest.java
 C:\swathi\MyWebApp\src\main\java\com\mycompany\student\service\StudentService.java
 C:\swathi\MyWebApp\src\main\java\com\mycompany\student\entity\StudentDTO.java
 C:\swathi\MyWebApp\src\main\java\com\mycompany\student\email\EmailAspect.java
-C:\swathi\MyWebApp\src\main\java\com\mycompany\student\email\Scheduler.java
 C:\swathi\MyWebApp\src\main\java\com\mycompany\student\config\JmsConfig.java
 C:\swathi\MyWebApp\src\main\java\com\mycompany\student\user\UserInfoUserDetailsService.java
 C:\swathi\MyWebApp\src\main\java\com\mycompany\student\config\SecurityConfig.java

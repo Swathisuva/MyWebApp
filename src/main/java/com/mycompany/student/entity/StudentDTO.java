@@ -1,6 +1,7 @@
 //studentDTO.java
 package com.mycompany.student.entity;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ public class StudentDTO implements Serializable {
     private Long id;
     private String dept;
     private String password;
+    @NotBlank(message = "First name cannot be blank")
     private String firstName;
     private String lastName;
 
