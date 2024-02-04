@@ -13,7 +13,7 @@ Before you begin, make sure you have the following installed:
 Getting Started
 1.	Clone the repository:
       bashCopy code
-      git clone https://github.com/your-username/spring-boot-crud.git cd spring-boot-crud
+      git clone https://github.com/Swathisuva/MyWebApp.git cd spring-boot-crud
 2.	Build the project:
       bashCopy code
       mvn clean install
