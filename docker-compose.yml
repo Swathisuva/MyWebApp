@@ -1,0 +1,75 @@
+
+version: '3'
+services:
+  app:
+    image: my-spring-boot-app
+    ports:
+      - "9090:8080"
+    depends_on:
+      - database
+      - activemq
+     # - redis
+      - fakesmtp
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/usersdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 1234
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_OPEN_IN_VIEW: false
+      SPRING_JPA_PROPERTIES_HIBERNATE_SHOW_SQL: true
+      SPRING_ACTIVEMQ_BROKER_URL: tcp://activemq:61616
+      SPRING_ACTIVEMQ_USER: admin
+      SPRING_ACTIVEMQ_PASSWORD: admin
+   #   REDIS_HOST: redis
+    #  REDIS_PORT: 6379
+      SPRING_MAIL_HOST: fakesmtp
+      SPRING_MAIL_PORT: 25
+      SPRING_MAIL_USERNAME: demo@localhost
+      SPRING_MAIL_PASSWORD: demopassword
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: "false"
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: "true"
+      SPRING_MAIL_PROPERTIES_MAIL_TRANSPORT_PROTOCOL: smtp
+      SPRING_MAIL_PROPERTIES_MAIL_SMTPS_QUITWAIT: "false"
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_SOCKETFACTORY_PORT: 465
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_SOCKETFACTORY_CLASS: javax.net.ssl.SSLSocketFactory
+
+#    links:
+#      - database
+
+
+
+  database:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: usersdb
+    ports:
+      - "3307:3306"
+
+  activemq:
+    image: rmohr/activemq:latest
+    environment:
+      ACTIVEMQ_CONFIG_NAME: amqp-srv
+      ACTIVEMQ_CONFIG_MINMEMORY: 512
+      ACTIVEMQ_CONFIG_MAXMEMORY: 1024
+      ACTIVEMQ_ADMIN_LOGIN: admin
+      ACTIVEMQ_ADMIN_PASSWORD: admin
+
+#  redis:
+#    image: redis:latest
+#    restart: always
+#    ports:
+#      - "6380:6379"
+#    deploy:
+#      resources:
+#        limits:
+#          memory: 1G
+
+  fakesmtp:
+    image: djfarrelly/maildev
+    ports:
+      - "25:25"
+    environment:
+      - EMAIL_STORAGE=/var/mail

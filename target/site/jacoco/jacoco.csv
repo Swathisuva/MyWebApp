@@ -2,7 +2,7 @@ GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_
 mywebapp,com.mycompany.student.security,AuthRequest,109,15,22,0,2,3,18,3,7,3
 mywebapp,com.mycompany.student.security,JWTService,102,0,4,0,24,0,12,0,10,0
 mywebapp,com.mycompany.student.security,JwtAuthFilter,74,0,12,0,18,0,8,0,2,0
-mywebapp,com.mycompany.student.service,StudentService,197,4,2,0,49,1,11,1,10,1
+mywebapp,com.mycompany.student.service,StudentService,257,4,2,0,61,1,14,1,13,1
 mywebapp,com.mycompany.student.service,UserService,23,0,0,0,7,0,2,0,2,0
 mywebapp,com.mycompany.student.user,UserInfo,48,188,24,16,0,8,21,15,1,15
 mywebapp,com.mycompany.student.user,UserInfoUserDetailsService,25,0,0,0,6,0,3,0,3,0
@@ -11,8 +11,10 @@ mywebapp,com.mycompany,MyWebAppApplication.SwaggerConfig,27,0,0,0,6,0,3,0,3,0
 mywebapp,com.mycompany,MyWebAppApplication,14,0,0,0,5,0,2,0,2,0
 mywebapp,com.mycompany.student.healthindicator,CustomHealthIndicator,0,32,0,2,0,10,0,4,0,3
 mywebapp,com.mycompany.student.email,EmailAspect,48,70,0,0,19,29,2,5,2,5
-mywebapp,com.mycompany.student.controller,StudentController,0,131,0,2,0,32,0,10,0,9
+mywebapp,com.mycompany.student.controller,StudentController,116,145,4,4,23,36,5,10,2,9
 mywebapp,com.mycompany.student.controller,UserController,0,43,0,0,0,11,0,3,0,3
+mywebapp,com.mycompany.student.exception,ResourceNotFoundException,4,0,0,0,2,0,1,0,1,0
+mywebapp,com.mycompany.student.exception,GlobalExceptionHandler,24,0,0,0,5,0,2,0,2,0
 mywebapp,com.mycompany.student.listener,MessageListener,0,20,0,0,0,7,0,3,0,3
 mywebapp,com.mycompany.student.config,JmsConfig,0,31,0,0,0,10,0,3,0,3
 mywebapp,com.mycompany.student.config,SecurityConfig,147,0,0,0,22,0,10,0,10,0

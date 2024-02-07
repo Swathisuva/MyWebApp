@@ -3,14 +3,20 @@ package com.mycompany.student.service;
 
 import com.mycompany.student.entity.StudentDTO;
 import com.mycompany.student.entity.Student;
+import com.mycompany.student.exception.ResourceNotFoundException;
 import com.mycompany.student.repository.StudentRepository;
 import com.mycompany.student.repository.UserInfoRepository;
 import com.mycompany.student.user.UserInfo;
+import jakarta.validation.ConstraintViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Value;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -19,8 +25,9 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@Cacheable(value=&quot;students&quot;)
 public class StudentService {
-<span class="fc" id="L23">    private static final Logger logger = LoggerFactory.getLogger(StudentService.class);</span>
+<span class="fc" id="L30">    private static final Logger logger = LoggerFactory.getLogger(StudentService.class);</span>
 
 
     private PasswordEncoder passwordEncoder;
@@ -38,99 +45,124 @@ public class StudentService {
     private String senderEmail;
 
 
-<span class="nc" id="L41">StudentService(PasswordEncoder passwordEncoder,UserInfoRepository repository,StudentRepository repo){</span>
-<span class="nc" id="L42">    this.passwordEncoder=passwordEncoder;</span>
-<span class="nc" id="L43">    this.repository=repository;</span>
-<span class="nc" id="L44">    this.repo=repo;</span>
+<span class="nc" id="L48">StudentService(PasswordEncoder passwordEncoder,UserInfoRepository repository,StudentRepository repo){</span>
+<span class="nc" id="L49">    this.passwordEncoder=passwordEncoder;</span>
+<span class="nc" id="L50">    this.repository=repository;</span>
+<span class="nc" id="L51">    this.repo=repo;</span>
 
 
-<span class="nc" id="L47">}</span>
+<span class="nc" id="L54">}</span>
 
     public List&lt;StudentDTO&gt; getAllStudents() {
-<span class="nc" id="L50">        logger.debug(&quot;Fetching all students&quot;);</span>
-<span class="nc" id="L51">        List&lt;Student&gt; students = (List&lt;Student&gt;) repo.findAll();</span>
+<span class="nc" id="L57">        logger.debug(&quot;Fetching all students&quot;);</span>
+<span class="nc" id="L58">        List&lt;Student&gt; students = (List&lt;Student&gt;) repo.findAll();</span>
 
-<span class="nc" id="L53">        return students.stream().map(this::convertToDTO).toList();</span>
+<span class="nc" id="L60">        return students.stream().map(this::convertToDTO).toList();</span>
     }
 
     public Optional&lt;StudentDTO&gt; getStudentById(Long id) {
-<span class="nc" id="L57">        logger.debug(&quot;Finding student by id: {}&quot;, id);</span>
-<span class="nc" id="L58">        Optional&lt;Student&gt; studentOptional = repo.findById(Math.toIntExact(id));</span>
-<span class="nc" id="L59">        return studentOptional.map(this::convertToDTO);</span>
+<span class="nc" id="L64">        logger.debug(&quot;Finding student by id: {}&quot;, id);</span>
+
+<span class="nc" id="L66">        return repo.findById(Math.toIntExact(id))</span>
+<span class="nc" id="L67">                .map(student -&gt; Optional.ofNullable(convertToDTO(student)))</span>
+<span class="nc" id="L68">                .orElseThrow(() -&gt; new ResourceNotFoundException(&quot;Student not found with ID: &quot; + id));</span>
     }
 
+@CacheEvict(value = &quot;students&quot;)
+    @CachePut(value = &quot;students&quot;, key = &quot;#result.id&quot;)
     public StudentDTO saveStudent(StudentDTO studentDTO) {
         // Convert StudentDTO to Student entity and save to the database
-<span class="nc" id="L64">        Student student = StudentDTO.toEntity(studentDTO);</span>
-<span class="nc" id="L65">        repo.save(student);</span>
-<span class="nc" id="L66">        return studentDTO;</span>
+<span class="nc" id="L75">        Student student = StudentDTO.toEntity(studentDTO);</span>
+<span class="nc" id="L76">        Student savedStudent = repo.save(student);</span>
+<span class="nc" id="L77">        return convertToDTO(savedStudent);</span>
     }
 
 
-    public void deleteStudent(Long id) {
-<span class="nc" id="L71">        logger.debug(&quot;Deleting student by id: {}&quot;, id);</span>
-<span class="nc" id="L72">        repo.deleteById(Math.toIntExact(id));</span>
 
-<span class="nc" id="L74">    }</span>
+    //    public void deleteStudent(Long id) {
+//        logger.debug(&quot;Deleting student by id: {}&quot;, id);
+//        repo.deleteById(Math.toIntExact(id));
+//
+//    }
+public void deleteStudent(Long id) {
+<span class="nc" id="L88">    logger.debug(&quot;Deleting student by id: {}&quot;, id);</span>
+
+<span class="nc" id="L90">    Student student = repo.findById(Math.toIntExact(id))</span>
+<span class="nc" id="L91">            .orElseThrow(() -&gt; new ResourceNotFoundException(&quot;Student not found with ID: &quot; + id));</span>
+
+<span class="nc" id="L93">    repo.delete(student);</span>
+<span class="nc" id="L94">}</span>
+
 
     public StudentDTO updateStudent(Long id, StudentDTO updatedStudentDTO) {
-<span class="nc" id="L77">        logger.debug(&quot;Updating student with id: {}&quot;, id);</span>
+<span class="nc" id="L98">        logger.debug(&quot;Updating student with id: {}&quot;, id);</span>
 
-<span class="nc" id="L79">        Optional&lt;Student&gt; existingStudentOptional = repo.findById(Math.toIntExact(id));</span>
+<span class="nc" id="L100">        Optional&lt;Student&gt; existingStudentOptional = repo.findById(Math.toIntExact(id));</span>
 
-<span class="nc bnc" id="L81" title="All 2 branches missed.">        if (existingStudentOptional.isPresent()) {</span>
-<span class="nc" id="L82">            Student existingStudent = existingStudentOptional.get();</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">        if (existingStudentOptional.isPresent()) {</span>
+<span class="nc" id="L103">            Student existingStudent = existingStudentOptional.get();</span>
 
             // Update the existing student with the new information
-<span class="nc" id="L85">            existingStudent.setDept(updatedStudentDTO.getDept());</span>
-<span class="nc" id="L86">            existingStudent.setPassword(updatedStudentDTO.getPassword());</span>
-<span class="nc" id="L87">            existingStudent.setFirstName(updatedStudentDTO.getFirstName());</span>
-<span class="nc" id="L88">            existingStudent.setLastName(updatedStudentDTO.getLastName());</span>
+<span class="nc" id="L106">            existingStudent.setDept(updatedStudentDTO.getDept());</span>
+<span class="nc" id="L107">            existingStudent.setPassword(updatedStudentDTO.getPassword());</span>
+<span class="nc" id="L108">            existingStudent.setFirstName(updatedStudentDTO.getFirstName());</span>
+<span class="nc" id="L109">            existingStudent.setLastName(updatedStudentDTO.getLastName());</span>
 
-<span class="nc" id="L90">            Student updatedStudent = repo.save(existingStudent);</span>
+<span class="nc" id="L111">            Student updatedStudent = repo.save(existingStudent);</span>
 
-<span class="nc" id="L92">            return convertToDTO(updatedStudent);</span>
+<span class="nc" id="L113">            return convertToDTO(updatedStudent);</span>
         } else {
-<span class="nc" id="L94">            logger.debug(&quot;Student with id {} not found&quot;, id);</span>
-<span class="nc" id="L95">            return null;</span>
+<span class="nc" id="L115">            logger.debug(&quot;Student with id {} not found&quot;, id);</span>
+<span class="nc" id="L116">            return null;</span>
         }
     }
 
     // Helper methods for conversion between entity and DTO
 
     private StudentDTO convertToDTO(Student student) {
-<span class="nc" id="L102">        StudentDTO studentDTO = new StudentDTO();</span>
-<span class="nc" id="L103">        studentDTO.setId(student.getId());</span>
-<span class="nc" id="L104">        studentDTO.setDept(student.getDept());</span>
-<span class="nc" id="L105">        studentDTO.setPassword(student.getPassword());</span>
-<span class="nc" id="L106">        studentDTO.setFirstName(student.getFirstName());</span>
-<span class="nc" id="L107">        studentDTO.setLastName(student.getLastName());</span>
-<span class="nc" id="L108">        return studentDTO;</span>
+<span class="nc" id="L123">        StudentDTO studentDTO = new StudentDTO();</span>
+<span class="nc" id="L124">        studentDTO.setId(student.getId());</span>
+<span class="nc" id="L125">        studentDTO.setDept(student.getDept());</span>
+<span class="nc" id="L126">        studentDTO.setPassword(student.getPassword());</span>
+<span class="nc" id="L127">        studentDTO.setFirstName(student.getFirstName());</span>
+<span class="nc" id="L128">        studentDTO.setLastName(student.getLastName());</span>
+<span class="nc" id="L129">        return studentDTO;</span>
     }
 
     private Student convertToEntity(StudentDTO studentDTO) {
-<span class="nc" id="L112">        Student student = new Student();</span>
-<span class="nc" id="L113">        student.setId(studentDTO.getId());</span>
-<span class="nc" id="L114">        student.setDept(studentDTO.getDept());</span>
-<span class="nc" id="L115">        student.setPassword(studentDTO.getPassword());</span>
-<span class="nc" id="L116">        student.setFirstName(studentDTO.getFirstName());</span>
-<span class="nc" id="L117">        student.setLastName(studentDTO.getLastName());</span>
-<span class="nc" id="L118">        return student;</span>
+<span class="nc" id="L133">        Student student = new Student();</span>
+<span class="nc" id="L134">        student.setId(studentDTO.getId());</span>
+<span class="nc" id="L135">        student.setDept(studentDTO.getDept());</span>
+<span class="nc" id="L136">        student.setPassword(studentDTO.getPassword());</span>
+<span class="nc" id="L137">        student.setFirstName(studentDTO.getFirstName());</span>
+<span class="nc" id="L138">        student.setLastName(studentDTO.getLastName());</span>
+<span class="nc" id="L139">        return student;</span>
     }
 
     public String addUser(UserInfo userInfo) {
-<span class="nc" id="L122">        userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));</span>
-<span class="nc" id="L123">        repository.save(userInfo);</span>
-<span class="nc" id="L124">        return &quot;user added to system&quot;;</span>
+<span class="nc" id="L143">        userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));</span>
+<span class="nc" id="L144">        repository.save(userInfo);</span>
+<span class="nc" id="L145">        return &quot;user added to system&quot;;</span>
     }
     public StudentDTO addStudent(StudentDTO studentDTO) {
-        // Convert StudentDTO to Student entity
-<span class="nc" id="L128">        Student student = convertToEntity(studentDTO);</span>
+        try {
+            // Convert StudentDTO to Student entity
+<span class="nc" id="L150">            Student student = convertToEntity(studentDTO);</span>
 
-        // Save the student to the students table
-<span class="nc" id="L131">        Student savedStudent = repo.save(student);</span>
+            // Save the student to the students table
+<span class="nc" id="L153">            Student savedStudent = repo.save(student);</span>
 
-<span class="nc" id="L133">        return convertToDTO(savedStudent);</span>
+<span class="nc" id="L155">            return convertToDTO(savedStudent);</span>
+<span class="nc" id="L156">        } catch (DataIntegrityViolationException | ConstraintViolationException ex) {</span>
+<span class="nc" id="L157">            logger.error(&quot;Data integrity violation while adding student&quot;, ex);</span>
+<span class="nc" id="L158">            throw new DataIntegrityViolationException(&quot;Data integrity violation while adding student&quot;, ex);</span>
+<span class="nc" id="L159">        } catch (IllegalArgumentException ex) {</span>
+<span class="nc" id="L160">            logger.error(&quot;Illegal argument while adding student&quot;, ex);</span>
+<span class="nc" id="L161">            throw new IllegalArgumentException(&quot;Illegal argument while adding student&quot;, ex);</span>
+<span class="nc" id="L162">        } catch (Exception ex) {</span>
+<span class="nc" id="L163">            logger.error(&quot;Error while adding student&quot;, ex);</span>
+<span class="nc" id="L164">            throw ex; // Rethrow the exception or handle it as needed</span>
+        }
     }
 
 }

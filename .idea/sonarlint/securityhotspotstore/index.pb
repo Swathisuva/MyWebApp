@@ -63,3 +63,12 @@ Q.idea/sonarlint/securityhotspotstore/8/b/8b145b62b12c7abaab69069408b6ef586ceab9
 Q.idea/sonarlint/securityhotspotstore/1/c/1cabebc3fca9005cdb227a2918b61b2f058691d7,d\d\dd08acf6ebe4497dac49a73e7d3de23eb68d4182
 Å
 Q.idea/sonarlint/securityhotspotstore/9/8/986015779ae63a5a678efd2e7c65fb2b3d05cfa4,2\f\2f4c730a935dbe3277d3ed3ba35589f6eea9988d
+4
+mvnw,5\d\5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
+8
+mvnw.cmd,1\f\1f1763f358c257ea3515417352b82b0165647ad1
+:
+
+Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
+B
+docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a

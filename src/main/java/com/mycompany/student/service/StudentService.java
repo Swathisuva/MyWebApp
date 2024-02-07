@@ -13,6 +13,8 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Value;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
@@ -23,7 +25,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@Cacheable(value="students")
+//@Cacheable(value="students")
 public class StudentService {
     private static final Logger logger = LoggerFactory.getLogger(StudentService.class);
 
@@ -66,16 +68,18 @@ StudentService(PasswordEncoder passwordEncoder,UserInfoRepository repository,Stu
                 .orElseThrow(() -> new ResourceNotFoundException("Student not found with ID: " + id));
     }
 
-
+@CacheEvict(value = "students")
+    @CachePut(value = "students", key = "#result.id")
     public StudentDTO saveStudent(StudentDTO studentDTO) {
         // Convert StudentDTO to Student entity and save to the database
         Student student = StudentDTO.toEntity(studentDTO);
-        repo.save(student);
-        return studentDTO;
+        Student savedStudent = repo.save(student);
+        return convertToDTO(savedStudent);
     }
 
 
-//    public void deleteStudent(Long id) {
+
+    //    public void deleteStudent(Long id) {
 //        logger.debug("Deleting student by id: {}", id);
 //        repo.deleteById(Math.toIntExact(id));
 //

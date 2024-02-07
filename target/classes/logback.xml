@@ -47,7 +47,7 @@
     </appender>
 
     <!-- Send logs to both console and file audit -->
-    <logger name="logging.level.com.appsdeveloperblog" level="debug" additivity="false">
+    <logger name="logging.level.com.appsdeveloperblog" level="info" additivity="false">
         <appender-ref ref="FILE-AUDIT" />
         <appender-ref ref="STDOUT" />
     </logger>

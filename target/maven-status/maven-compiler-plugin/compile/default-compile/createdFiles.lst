@@ -15,7 +15,9 @@ com\mycompany\student\entity\StudentDTO.class
 com\mycompany\student\service\StudentService.class
 com\mycompany\student\controller\StudentController.class
 com\mycompany\student\entity\Student.class
+com\mycompany\student\exception\ResourceNotFoundException.class
 com\mycompany\student\security\JWTService.class
 com\mycompany\student\healthindicator\CustomHealthIndicator.class
 com\mycompany\student\repository\StudentRepository.class
 com\mycompany\MyWebAppApplication$SwaggerConfig.class
+com\mycompany\student\exception\GlobalExceptionHandler.class

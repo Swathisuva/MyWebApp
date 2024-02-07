@@ -23,9 +23,11 @@ Getting Started
 4.	Access the Swagger API documentation at http://localhost:8080/swagger-ui.html
       Authentication
       •	Spring Security is enabled with token-based authentication.
+      
       •	Obtain a token by calling the /authenticate endpoint with valid credentials.
+
       •	Include the token in the Authorization header for subsequent API requests.
-      •
+      
       Usage
       •	Read: The list of student is displayed on the home page.
       •	Update: Click on the "Edit" link next to an entity to update its information.
