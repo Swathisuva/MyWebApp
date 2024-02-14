@@ -1,4 +1,18 @@
 
-]
-java:S1220""Move this file to a named package.8šÍë¾Ö1J$fbdafc08-422b-4593-b7a8-28cce537b40a
-ƒ	java:S125"<This block of commented-out lines of code should be removed.(ò»ÐÂýÿÿÿÿ8›Íë¾Ö1J$26932846-b8da-474f-ae95-443ab074e220
+¡
+java:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(¿å§‡ÿÿÿÿÿ8–ì¼ÝØ1J$cf89e236-e32d-4735-89e6-c7113c1ccb00
+±
+java:S1488!"iImmediately return this expression instead of assigning it to the temporary variable "connectionFactory".(ž§Ü‘ÿÿÿÿÿ8™ì¼ÝØ1J$26b239e4-3a88-43cb-999b-69c6265fc1b5
+ˆ
+java:S1874"@Remove this use of "CachingConfigurerSupport"; it is deprecated.(‘´ÊÌùÿÿÿÿ8“í¼ÝØ1J$8af40c27-fa94-4450-8642-5605abd84115
+†
+java:S1128"CRemove this unused import 'org.springframework.cache.CacheManager'.(÷ë¿Û8”î¼ÝØ1J$91bc036d-3ac9-4a7d-8372-a9fe9626e250
+¡
+java:S1128	"YRemove this unused import 'org.springframework.data.redis.cache.RedisCacheConfiguration'.(ÏÀÉ®ûÿÿÿÿ8•î¼ÝØ1J$716929af-b403-45a7-87fb-23465a1bc672
+–
+java:S1128
+"SRemove this unused import 'org.springframework.data.redis.cache.RedisCacheManager'.(îª¼î8•î¼ÝØ1J$59779a86-faef-4904-a36c-766ce8076f75
+«
+java:S1128"cRemove this unused import 'org.springframework.data.redis.connection.jedis.JedisConnectionFactory'.(¨ážøþÿÿÿÿ8—î¼ÝØ1J$b1f07161-7398-4ab7-bf4c-3091452dbbd9
+w
+java:S1128"/Remove this unused import 'java.time.Duration'.(ëá¯‰üÿÿÿÿ8˜î¼ÝØ1J$e1057f32-2f76-490a-a9e6-8d982a9c41e4

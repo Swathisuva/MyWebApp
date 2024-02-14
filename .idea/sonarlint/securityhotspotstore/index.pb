@@ -72,3 +72,37 @@ Q.idea/sonarlint/securityhotspotstore/9/8/986015779ae63a5a678efd2e7c65fb2b3d05cf
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 B
 docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a
+U
+%studentkube/templates/deployment.yaml,7\5\752cdcd123868e7ef05d481181f89fcf41ed3b46
+G
+studentkube/values.yaml,6\5\654afc71cd793439660668e180a567736e7eeb86
+V
+&studentchart/templates/deployment.yaml,8\a\8a6ba7100ebc91f117a7e9df92bf45cc2df67baa
+Q
+!studentchart/templates/redis.yaml,5\6\5609baf6fb42bf2d05a64a9cd53ae8c23bfe2a47
+T
+$studentchart/templates/activemq.yaml,e\1\e110938d119d0cafebfe9c9067f747c5495476c4
+T
+$studentchart/templates/fakesmtp.yaml,6\2\62d35a1b2ab52b4adfa758f2c9f2500a355474e2
+Q
+!studentchart/templates/mysql.yaml,e\8\e85c6e404e5981c824589da6fc82adf2ab9a0c83
+S
+#studentchart/templates/service.yaml,9\a\9aaf84fac97a73d748cb6230be874e0a59a096b8
+H
+studentchart/values.yaml,5\8\58516e54b7ace60d6e9c26e29d1253285aa96698
+Z
+*studentchart/templates/serviceaccount.yaml,3\1\313a82968c8028951f7fccb1cab646ce79eec10d
+S
+#studentchart/templates/ingress.yaml,e\2\e27ee798cda90d89e51170d04a76f4257aa2c678
+G
+studentchart/Chart.yaml,d\d\ddcfd7c088936895894a79a11939d18a92ccf2b2
+H
+studentchart/.helmignore,a\b\ab0fdc1f6eac75306ac569164a3d111eaded49bf
+P
+ studentchart/templates/NOTES.txt,c\1\c1d7c015e645b793a851b7adb4a9348735423e82
+O
+studentchart/templates/hpa.yaml,e\3\e338536c5c247f43c7a999c7f3a5f623c9824ce0
+S
+#studentchart/templates/_helpers.tpl,5\9\591a2208a492bb97bdde3015c558b9fb1387f03d
+a
+1studentchart/templates/tests/test-connection.yaml,d\c\dcef6ceb7d1d055ea253a02f1cbd9e8b31f140b5

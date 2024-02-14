@@ -17,6 +17,7 @@ mywebapp,com.mycompany.student.exception,ResourceNotFoundException,4,0,0,0,2,0,1
 mywebapp,com.mycompany.student.exception,GlobalExceptionHandler,24,0,0,0,5,0,2,0,2,0
 mywebapp,com.mycompany.student.listener,MessageListener,0,20,0,0,0,7,0,3,0,3
 mywebapp,com.mycompany.student.config,JmsConfig,0,31,0,0,0,10,0,3,0,3
+mywebapp,com.mycompany.student.config,CacheConfig,47,0,0,0,12,0,3,0,3,0
 mywebapp,com.mycompany.student.config,SecurityConfig,147,0,0,0,22,0,10,0,10,0
 mywebapp,com.mycompany.student.entity,StudentDTO,185,108,46,0,0,21,26,15,3,15
 mywebapp,com.mycompany.student.entity,Student,197,38,46,0,0,6,27,11,4,11

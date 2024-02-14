@@ -1,0 +1,36 @@
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: fakesmtp
+#  labels:
+#    app: fakesmtp
+#spec:
+#  replicas: 1
+#  selector:
+#    matchLabels:
+#      app: fakesmtp
+#  template:
+#    metadata:
+#      labels:
+#        app: fakesmtp
+#    spec:
+#      containers:
+#        - name: fakesmtp
+#          image: djfarrelly/maildev
+#          ports:
+#            - containerPort: 25
+#          env:
+#            - name: SPRING_MAIL_HOST
+#              value: "fakesmtp"
+#            - name: SPRING_MAIL_PORT
+#              value: "25"
+#            - name: SPRING_MAIL_USERNAME
+#              value: "demo@localhost"
+#            - name: SPRING_MAIL_PASSWORD
+#              value: "demopassword"
+#            - name: SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH
+#              value: "true"
+#            - name: SPRING_MAIL_PROPERTIES_MAIL_TRANSPORT_PROTOCOL
+#              value: "smtp"
+#            - name: SPRING_MAIL_PROPERTIES_MAIL_SMTPS_QUITWAIT
+#              value: "false"

@@ -1,0 +1,129 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+  labels:
+    app: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+        - name: redis
+          image: redis:latest
+          ports:
+            - containerPort: 6379
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  labels:
+    app: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:latest
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "1234"  # Set your MySQL root password here
+            - name: MYSQL_DATABASE
+              value: "usersdb"   # Set your MySQL database name here
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:mysql://localhost:3306/usersdb"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "root"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "1234"
+          ports:
+            - containerPort: 3306
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: activemq
+  labels:
+    app: activemq
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: activemq
+  template:
+    metadata:
+      labels:
+        app: activemq
+    spec:
+      containers:
+        - name: activemq
+          image: rmohr/activemq:latest
+          ports:
+            - containerPort: 61616
+            - containerPort: 8161
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fakesmtp
+  labels:
+    app: fakesmtp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fakesmtp
+  template:
+    metadata:
+      labels:
+        app: fakesmtp
+    spec:
+      containers:
+        - name: fakesmtp
+          image: djfarrelly/maildev
+          ports:
+            - containerPort: 25
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student
+  labels:
+    app: student
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student
+  template:
+    metadata:
+      labels:
+        app: student
+    spec:
+      containers:
+        - name: student
+          image: swathi07/student
+
+          ports:
+            - containerPort: 8080
+

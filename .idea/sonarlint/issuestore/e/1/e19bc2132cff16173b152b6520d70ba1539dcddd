@@ -1,3 +1,3 @@
 
 Ž
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹J$be8448b4-9b6d-4c63-95d1-135148149c01
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹J$e6853da3-aad2-44db-9452-be99e635cd86
